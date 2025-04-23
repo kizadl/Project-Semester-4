@@ -63,7 +63,7 @@
       <li>
         <a href="email.html">
           <iconify-icon icon="solar:document-text-outline" class="menu-icon"></iconify-icon>
-          <span>Kualifikasi</span>
+          <span>Klasifikasi</span>
         </a>
       </li>
 
