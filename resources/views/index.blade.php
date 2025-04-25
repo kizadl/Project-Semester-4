@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wowdash - Bootstrap 5 Admin Dashboard HTML Template</title>
+  <title>My Health</title>
   <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="16x16">
   <!-- remix icon font css  -->
   <link rel="stylesheet" href="assets/css/remixicon.css">
@@ -63,14 +63,14 @@
       <li class="sidebar-menu-group-title">Application</li>
 
       <li>
-        <a href="/index">
+        <a href="/klasifikasi">
           <iconify-icon icon="solar:document-text-outline" class="menu-icon"></iconify-icon>
           <span>Klasifikasi</span>
         </a>
       </li>
 
       <li>
-        <a href="/index">
+        <a href="/riwayat">
           <iconify-icon icon="mingcute:storage-line" class="menu-icon"></iconify-icon>
           <span>Riwayat</span>
         </a>
