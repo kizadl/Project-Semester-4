@@ -1,4 +1,5 @@
-{{-- Sidebar Start --}}
+<div>
+    {{-- Sidebar Start --}}
 <aside class="sidebar">
     <button type="button" class="sidebar-close-btn">
     <iconify-icon icon="radix-icons:cross-2"></iconify-icon>
@@ -39,3 +40,4 @@
     </div>
 </aside>
 {{-- Sidebar End --}}
+</div>
