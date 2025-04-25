@@ -70,13 +70,6 @@
       <li>
         <a href="email.html">
           <iconify-icon icon="mingcute:storage-line" class="menu-icon"></iconify-icon>
-          <span>Table</span>
-        </a>
-      </li>
-
-      <li>
-        <a href="email.html">
-          <iconify-icon icon="mingcute:storage-line" class="menu-icon"></iconify-icon>
           <span>Riwayat</span>
         </a>
       </li>
