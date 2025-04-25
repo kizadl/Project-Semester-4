@@ -39,7 +39,7 @@
 </head>
   <body>
 
-
+<x-navbar></x-navbar>
 
 {{-- Dashboard-Main Start --}}
 <main class="dashboard-main">
