@@ -60,6 +60,8 @@
         </a>
       </li>
 
+      <li class="sidebar-menu-group-title">Application</li>
+
       <li>
         <a href="email.html">
           <iconify-icon icon="solar:document-text-outline" class="menu-icon"></iconify-icon>
