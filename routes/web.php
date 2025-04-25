@@ -22,9 +22,9 @@ Route::get('/index', function () {
 });
 
 Route::get('/klasifikasi', function () {
-    return view('index');
+    return view('klasifikasi');
 });
 
 Route::get('/riwayat', function () {
-    return view('index');
+    return view('riwayat');
 });
