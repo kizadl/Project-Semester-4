@@ -25,6 +25,6 @@ Route::get('/klasifikasi', function () {
     return view('klasifikasi');
 });
 
-Route::get('/riwayat', function () {
-    return view('riwayat');
+Route::get('/user', function () {
+    return view('user');
 });
