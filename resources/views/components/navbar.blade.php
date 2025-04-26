@@ -29,9 +29,9 @@
             </li>
 
         <li class="sidebar-menu-group-title">Data Master</li>
-        
+
         <li>
-        <a href="/riwayat">
+        <a href="/user">
             <iconify-icon icon="mingcute:storage-line" class="menu-icon"></iconify-icon>
             <span>User</span>
         </a>
