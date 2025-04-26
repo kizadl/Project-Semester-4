@@ -62,9 +62,9 @@
 </div>
 
   <div class="card basic-data-table">
-  <div class="card-header">
-    <h5 class="card-title mb-0">Default Datatables</h5>
-  </div>
+    <div class="card-header">
+      <h5 class="card-title mb-0">Default Datatables</h5>
+    </div>
   <div class="card-body">
     <table class="table bordered-table mb-0" id="dataTable" data-page-length='10'>
       <thead>
