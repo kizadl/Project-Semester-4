@@ -13,6 +13,7 @@
     </div>
     <div class="sidebar-menu-area">
     <ul class="sidebar-menu" id="sidebar-menu">
+        <li class="sidebar-menu-group-title">Application</li>
         <li>
         <a href="/index">
             <iconify-icon icon="solar:home-smile-angle-outline" class="menu-icon"></iconify-icon>
@@ -20,19 +21,19 @@
         </a>
         </li>
 
-        <li class="sidebar-menu-group-title">Application</li>
-
         <li>
-        <a href="/klasifikasi">
-            <iconify-icon icon="solar:document-text-outline" class="menu-icon"></iconify-icon>
-            <span>Klasifikasi</span>
-        </a>
-        </li>
+            <a href="/klasifikasi">
+                <iconify-icon icon="solar:document-text-outline" class="menu-icon"></iconify-icon>
+                <span>Klasifikasi</span>
+            </a>
+            </li>
 
+        <li class="sidebar-menu-group-title">Data Master</li>
+        
         <li>
         <a href="/riwayat">
             <iconify-icon icon="mingcute:storage-line" class="menu-icon"></iconify-icon>
-            <span>Riwayat</span>
+            <span>User</span>
         </a>
         </li>
         
