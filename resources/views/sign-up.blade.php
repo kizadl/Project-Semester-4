@@ -109,7 +109,7 @@
                     </button>
                 </div>
                 <div class="mt-32 text-center text-sm">
-                    <p class="mb-0">Already have an account? <a href="sign-in.html" class="text-primary-600 fw-semibold">Sign In</a></p>
+                    <p class="mb-0">Already have an account? <a href="/sign-in" class="text-primary-600 fw-semibold">Sign In</a></p>
                 </div>
                 
             </form>
