@@ -28,3 +28,7 @@ Route::get('/klasifikasi', function () {
 Route::get('/user', function () {
     return view('user');
 });
+
+Route::get('/sign-in', function () {
+    return view('sign-in');
+});
