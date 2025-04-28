@@ -29,6 +29,10 @@ Route::get('/user', function () {
     return view('user');
 });
 
+//Auth
 Route::get('/sign-in', function () {
     return view('sign-in');
+});
+Route::get('/sign-up', function () {
+    return view('sign-up');
 });
