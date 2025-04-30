@@ -27,6 +27,6 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 
 
 // User
-Route::get('/user/home', [UserController::class, 'home'])->name('user.home');
+Route::get('/', [UserController::class, 'home'])->name('user.home');
 
 Route::get('/user/klasifikasi', [UserController::class, 'klasifikasi'])->name('user.klasifikasi');
