@@ -25,10 +25,16 @@ Route::get('/user', function () {
     return view('administrator.user');
 });
 
-//Auth
+// Auth
 Route::get('/sign-in', function () {
     return view('sign-in');
 });
+
 Route::get('/sign-up', function () {
     return view('sign-up');
+});
+
+// User
+Route::get('/', function () {
+    return view('home');
 });
