@@ -79,7 +79,7 @@
           <div class="col-md-4">
             <div class="card">
               <div class="img">
-                <img src="assets/img/1.png" alt="" class="img-fluid">
+                <img src="assets/assets/img/1.png" alt="" class="img-fluid">
                 <div class="icon"><i class="bi bi-hospital"></i></div>
               </div>
               <h2 class="title">Penyakit Jantung Koroner</h2>
@@ -90,7 +90,7 @@
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="card">
               <div class="img">
-                <img src="assets/img/2.png" alt="" class="img-fluid">
+                <img src="assets/assets/img/2.png" alt="" class="img-fluid">
                 <div class="icon"><i class="bi bi-brightness-high"></i></div>
               </div>
               <h2 class="title">Serangan Jantung</h2>
@@ -101,7 +101,7 @@
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
             <div class="card">
               <div class="img">
-                <img src="assets/img/3.png" alt="" class="img-fluid">
+                <img src="assets/assets/img/3.png" alt="" class="img-fluid">
                 <div class="icon"><i class="bi bi-clipboard-pulse"></i></div>
               </div>
               <h2 class="title">Gagal Jantung</h2>
@@ -112,7 +112,7 @@
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
             <div class="card">
               <div class="img">
-                <img src="assets/img/4.png" alt="" class="img-fluid">
+                <img src="assets/assets/img/4.png" alt="" class="img-fluid">
                 <div class="icon"><i class="bi bi-clipboard-pulse"></i></div>
               </div>
               <h2 class="title">Aritmia</h2>
@@ -123,7 +123,7 @@
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
             <div class="card">
               <div class="img">
-                <img src="assets/img/5.png" alt="" class="img-fluid">
+                <img src="assets/assets/img/5.png" alt="" class="img-fluid">
                 <div class="icon"><i class="bi bi-brightness-high"></i></div>
               </div>
               <h2 class="title">Penyakit Katup Jantung</h2>
@@ -134,7 +134,7 @@
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
             <div class="card">
               <div class="img">
-                <img src="assets/img/6.png" alt="" class="img-fluid">
+                <img src="assets/assets/img/6.png" alt="" class="img-fluid">
                 <div class="icon"><i class="bi bi-hospital"></i></div>
               </div>
               <h2 class="title">Kardiomiopati</h2>
@@ -154,7 +154,7 @@
           <p>Ikuti langkah-langkah berikut untuk melakukan klasifikasi dan mengetahui hasilnya terkait dengan kondisi penyakit jantung.</p>
         </div>
         <div class="text-center mb-4 steps-img" data-aos="zoom-out">
-          <img src="assets/img/7.png" alt="">
+          <img src="assets/assets/img/7.png" alt="">
         </div>
 
         <div class="row gy-4">
