@@ -9,12 +9,12 @@
           <div class="col-lg-8 d-flex flex-column justify-content-center align-items text-center text-md-start" data-aos="fade-up">
             <h2>Memahami Penyakit Jantung Melalui Klasifikasi, Langkah Awal Menuju Hidup Sehat</h2>
             <div class="d-flex mt-4 justify-content-center justify-content-md-start">
-              <a href="klasifikasi.html" class="download-btn"><span>Jelajahi</span></a>
+              <a href="{{ route('user.klasifikasi') }}" class="download-btn"><span>Jelajahi</span></a>
             </div>
           </div>
         </div>
       </div>
-    </section><!-- /Hero Section -->
+    </section>
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -34,7 +34,7 @@
                   <h3>Eius provident</h3>
                   <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem</p>
                 </div>
-              </div> <!-- End Icon Box -->
+              </div>
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box">
@@ -42,7 +42,7 @@
                   <h3>Rerum aperiam</h3>
                   <p>Autem saepe animi et aut aspernatur culpa facere. Rerum saepe rerum voluptates quia</p>
                 </div>
-              </div> <!-- End Icon Box -->
+              </div>
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-box">
@@ -50,7 +50,7 @@
                   <h3>Veniam omnis</h3>
                   <p>Omnis perferendis molestias culpa sed. Recusandae quas possimus. Quod consequatur corrupti</p>
                 </div>
-              </div> <!-- End Icon Box -->
+              </div>
 
               <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
                 <div class="icon-box">
@@ -58,21 +58,20 @@
                   <h3>Delares sapiente</h3>
                   <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p>
                 </div>
-              </div> <!-- End Icon Box -->
+              </div>
 
             </div>
           </div>
         </div>
       </div>
-    </section><!-- /About Section -->
+    </section>
 
     <!-- Featured Section -->
     <section id="featured" class="featured section">
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Jenis - Jenis Penyakit Jantung</h2>
         <p>Beberapa jenis penyakit jantung yang dapat mempengaruhi kesehatan seseorang.</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container">
         <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
@@ -85,7 +84,7 @@
               <h2 class="title">Penyakit Jantung Koroner</h2>
               <p>Terjadi ketika pembuluh darah yang membawa darah ke jantung (arteri koroner) menyempit atau tersumbat, umumnya akibat penumpukan kolesterol dan plak lemak (aterosklerosis).</p>
             </div>
-          </div><!-- End Card Item -->
+          </div>
 
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="card">
@@ -96,7 +95,7 @@
               <h2 class="title">Serangan Jantung</h2>
               <p>Terjadi ketika aliran darah ke bagian otot jantung terhenti akibat penyumbatan pembuluh darah koroner, menyebabkan kerusakan atau kematian pada jaringan jantung.</p>
             </div>
-          </div><!-- End Card Item -->
+          </div>
 
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
             <div class="card">
@@ -107,7 +106,7 @@
               <h2 class="title">Gagal Jantung</h2>
               <p>Terjadi ketika jantung tidak mampu memompa darah dengan cukup efisien untuk memenuhi kebutuhan tubuh.</p>
             </div>
-          </div><!-- End Card Item -->
+          </div>
           
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
             <div class="card">
@@ -118,7 +117,7 @@
               <h2 class="title">Aritmia</h2>
               <p>Gangguan pada irama jantung yang menyebabkan jantung berdetak terlalu cepat (takikardia), terlalu lambat (bradikardia), atau tidak teratur.</p>
             </div>
-          </div><!-- End Card Item -->
+          </div>
 
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
             <div class="card">
@@ -129,7 +128,7 @@
               <h2 class="title">Penyakit Katup Jantung</h2>
               <p>Katup jantung yang rusak dapat menyebabkan darah mengalir tidak dengan baik melalui jantung. Kerusakan ini bisa disebabkan oleh infeksi, kelainan bawaan, atau degenerasi pada usia lanjut.</p>
             </div>
-          </div><!-- End Card Item -->
+          </div>
 
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
             <div class="card">
@@ -140,11 +139,11 @@
               <h2 class="title">Kardiomiopati</h2>
               <p>Kelainan pada otot jantung yang membuatnya lebih lemah dan kurang efektif dalam memompa darah. Ini bisa disebabkan oleh genetika, infeksi, atau kondisi lain.</p>
             </div>
-          </div><!-- End Card Item -->
+          </div>
 
         </div>
       </div>
-    </section><!-- /Featured Section -->
+    </section>
 
     <!-- Cards Section -->
     <section id="cards" class="cards section">
@@ -164,15 +163,15 @@
               <h4><a href="" class="stretched-link">Masuk/Daftar</a></h4>
               <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
             </div>
-          </div><!-- Card Item -->
+          </div>
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
             <div class="card-item">
               <span>02</span>
               <h4><a href="" class="stretched-link">Klasifikasi</a></h4>
-              <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et vel dire leno para dest</p>
+              <p>Masuk ke halaman klasifikasi dan mengisi semua inputan yang diperlukan untuk melakukan klasifikasi.</p>
             </div>
-          </div><!-- Card Item -->
+          </div>
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
             <div class="card-item">
@@ -180,19 +179,18 @@
               <h4><a href="" class="stretched-link">Hasil Klasifikasi</a></h4>
               <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
             </div>
-          </div><!-- Card Item -->
+          </div>
 
         </div>
       </div>
-    </section><!-- /Cards Section -->
+    </section>
 
     <!-- Faq Section -->
     <section id="faq" class="faq section">
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Frequently Asked Questions</h2>
         <p>Temukan jawaban atas pertanyaan-pertanyaan umum mengenai penyakit jantung</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container">
         <div class="row justify-content-center">
@@ -205,7 +203,7 @@
                     Beberapa faktor yang dapat meningkatkan risiko seseorang terkena penyakit jantung antara lain tekanan darah tinggi, kolesterol tinggi, diabetes, obesitas, kebiasaan merokok, dan gaya hidup yang tidak sehat.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
+              </div>
 
               <div class="faq-item">
                 <h3>Apa saja gejala umum yang sering dialami oleh penderita penyakit jantung?</h3>
@@ -214,7 +212,7 @@
                     Namun, beberapa orang mungkin tidak menunjukkan gejala awal.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
+              </div>
 
               <div class="faq-item">
                 <h3>Bagaimana cara melakukan pengobatan pada penderita penyakit jantung?</h3>
@@ -222,7 +220,7 @@
                   <p>Pengobatan penyakit jantung meliputi perubahan gaya hidup seperti diet sehat, berolahraga secara teratur, dan berhenti merokok.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
+              </div>
 
               <div class="faq-item">
                 <h3>Bagaimana cara mencegah penyakit jantung?</h3>
@@ -231,20 +229,20 @@
                     Selain itu, menjaga berat badan dan menghindari konsumsi alkohol berlebihan juga dapat mengurangi risiko terkena penyakit jantung.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
+              </div>
+
             </div>
-          </div><!-- End Faq Column-->
+          </div>
         </div>
       </div>
-    </section><!-- /Faq Section -->
+    </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact section">
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Kontak</h2>
         <p>Menjelajahi pandangan dan pemahaman mengenai Penyakit Jantung untuk menciptakan kesadaran dan memberikan dukungan bagi mereka yang terkena Penyakit Jantung.</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container" data-aos="fade" data-aos-delay="100">
         <div class="row gy-4">
@@ -255,7 +253,7 @@
                 <h3>Alamat</h3>
                 <p>Jember, Jawa Timur, Indonesia</p>
               </div>
-            </div><!-- End Info Item -->
+            </div>
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
               <i class="bi bi-telephone flex-shrink-0"></i>
@@ -263,7 +261,7 @@
                 <h3>No. Telepon</h3>
                 <p>+62 812-3456-7890</p>
               </div>
-            </div><!-- End Info Item -->
+            </div>
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
               <i class="bi bi-envelope flex-shrink-0"></i>
@@ -271,7 +269,7 @@
                 <h3>Email</h3>
                 <p>dokter@gmail.com</p>
               </div>
-            </div><!-- End Info Item -->
+            </div>
 
           </div>
 
@@ -298,9 +296,9 @@
                 </div>
               </div>
             </form>
-          </div><!-- End Contact Form -->
+          </div>
         </div>
       </div>
-    </section><!-- /Contact Section -->
+    </section>
   </main>
 @endsection
