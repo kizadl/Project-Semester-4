@@ -36,5 +36,5 @@ Route::get('/sign-up', function () {
 
 // User
 Route::get('/', function () {
-    return view('home');
+    return view('user.home');
 });
