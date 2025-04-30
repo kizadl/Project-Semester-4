@@ -15,7 +15,7 @@
     <ul class="sidebar-menu" id="sidebar-menu">
         <li class="sidebar-menu-group-title">Application</li>
         <li>
-        <a href="/index">
+        <a href="/dashboard">
             <iconify-icon icon="solar:home-smile-angle-outline" class="menu-icon"></iconify-icon>
             <span>Dashboard</span>
         </a>
