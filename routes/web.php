@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,8 +18,8 @@ Route::get('/dashboard', function () {
     return view('administrator.dashboard');
 });
 
-Route::get('/klasifikasi', function () {
-    return view('administrator.klasifikasi');
+Route::get('/riyawat', function () {
+    return view('administrator.riwayat');
 });
 
 Route::get('/user', function () {
@@ -35,6 +36,6 @@ Route::get('/sign-up', function () {
 });
 
 // User
-Route::get('/', function () {
-    return view('user.home');
-});
+Route::get('/user/home', [UserController::class, 'home'])->name('user.home');
+
+Route::get('/user/klasifikasi', [UserController::class, 'klasifikasi'])->name('user.klasifikasi');
