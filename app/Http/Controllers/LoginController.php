@@ -7,10 +7,11 @@ use Illuminate\Http\Request;
 class LoginController extends Controller
 {
     public function index(){
-        return view('auth.sign-in');
+        return view('auth.login');
     }
 
-    public function login_proses(Request $request){
+    public function login_proses(Request $request)
+    {
         $request->validate([
             'email' => 'required',
             'password' => 'required'
@@ -21,12 +22,10 @@ class LoginController extends Controller
             'password' => $request->password,
         ];
 
-        dd(Auth::attempt($data));
-
-        if(Auth::attempt($data)){
-            return redirect()->route('administrator.dashboard');
-        }else{
-            return redirect()->route('sign-in')->with('failed', 'Email atau Password Salah');
+        if (Auth::attempt($data)) {
+            return redirect()->route('dashboard');
+        } else {
+            return redirect()->route('login')->with('failed', 'Email atau Password Salah');
         }
     }
 }

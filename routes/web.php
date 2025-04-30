@@ -16,10 +16,10 @@ Route::get('/user', function () {
 });
 
 //Authentification
-Route::get('/sign-in', [LoginController::class, 'index'])->name('sign-in');
+Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login-proses', [LoginController::class, 'login_proses'])->name('login-proses');
 Route::middleware(['auth'])->group(function () {
-    Route::get('/administrator/dashboard', [AdminController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
 });
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
