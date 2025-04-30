@@ -34,10 +34,16 @@
             <nav id="navmenu" class="navmenu">
                 <ul>
                     <li><a href="{{ route('user.home') }}" class="{{ Route::currentRouteName() == 'user.home' ? 'active' : '' }}">Beranda</a></li>
-                    <li><a href="#about">Tentang</a></li>
-                    <li><a href="#cards">Layanan</a></li>
+                    <li><a href="{{ route('user.home') }}#about">Tentang</a></li>
+                    <li><a href="{{ route('user.home') }}#cards">Layanan</a></li>
                     <li><a href="{{ route('user.klasifikasi') }}" class="{{ Route::currentRouteName() == 'user.klasifikasi' ? 'active' : '' }}">Klasifikasi</a></li>
-                    <li><a href="#contact">Kontak</a></li>
+                    <li><a href="{{ route('user.home') }}#contact">Kontak</a></li>
+                    <li class="dropdown"><a href="#"><span>Akun</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                        <ul>
+                            <li><a href="{{ route('login') }}">Masuk</a></li>
+                            <li><a href="{{ route('register') }}">Daftar</a></li>
+                        </ul>
+                    </li>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
