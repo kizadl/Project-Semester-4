@@ -22,7 +22,7 @@
     <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
 
     <!-- Main CSS File -->
-    <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/assets/css/main.css') }}" rel="stylesheet">
 </head>
 
 <body class="index-page">
@@ -36,7 +36,7 @@
                     <li><a href="#hero" class="active">Beranda</a></li>
                     <li><a href="#about">Tentang</a></li>
                     <li><a href="#cards">Layanan</a></li>
-                    <li><a href="{{ route('klasifikasi') }}">Klasifikasi</a></li>
+                    <li><a href="{{ route('user.klasifikasi') }}">Klasifikasi</a></li>
                     <li><a href="#contact">Kontak</a></li>
                     <li class="dropdown"><a href="#"><span>Akun</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
@@ -73,6 +73,18 @@
 
     <!-- Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var today = new Date();
+      var dd = String(today.getDate()).padStart(2, '0');
+      var mm = String(today.getMonth() + 1).padStart(2, '0');
+      var yyyy = today.getFullYear();
+      today = yyyy + '-' + mm + '-' + dd;
+
+      document.getElementById("inputDate").value = today;
+    });
+  </script>
 </body>
 
 </html>
