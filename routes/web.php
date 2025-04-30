@@ -13,20 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/index', function () {
-    return view('index');
+Route::get('/dashboard', function () {
+    return view('administrator.dashboard');
 });
 
 Route::get('/klasifikasi', function () {
-    return view('klasifikasi');
+    return view('administrator.klasifikasi');
 });
 
 Route::get('/user', function () {
-    return view('user');
+    return view('administrator.user');
 });
 
 //Auth
