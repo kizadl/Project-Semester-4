@@ -27,7 +27,6 @@
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
-
 .light-background {
   --background-color: #ffffff;
   --surface-color: #ffffff;
@@ -76,8 +75,7 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/* PHP Email Form Messages
-------------------------------*/
+/* PHP Email Form Messages */
 .php-email-form .error-message {
   display: none;
   background: #df1529;
@@ -775,6 +773,7 @@ section,
 
 .about .content p:last-child {
   margin-bottom: 0;
+  text-align: justify;
 }
 
 .about .content .read-more {
@@ -923,6 +922,7 @@ section,
   line-height: 24px;
   margin-bottom: 0;
   padding: 0 30px 30px 30px;
+  text-align: justify;
 }
 
 /*--------------------------------------------------------------
@@ -969,6 +969,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   margin: 0;
   padding: 0;
+  text-align: justify;
 }
 
 .cards .card-item:hover {
@@ -1370,6 +1371,7 @@ section,
 .faq .faq-container .faq-item .faq-content p {
   margin-bottom: 0;
   overflow: hidden;
+  text-align: justify;
 }
 
 .faq .faq-container .faq-item .faq-toggle {
@@ -1481,12 +1483,11 @@ section,
   border-radius: 0;
   color: var(--default-color);
   background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
   transition: 0.4s;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
 .contact .php-email-form button[type=submit]:hover {

@@ -70,7 +70,7 @@
     <section id="featured" class="featured section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Jenis - Jenis Penyakit Jantung</h2>
-        <p>Beberapa jenis penyakit jantung yang dapat mempengaruhi kesehatan seseorang.</p>
+        <p>Beberapa jenis penyakit jantung yang dapat mempengaruhi kesehatan seseorang</p>
       </div>
 
       <div class="container">
@@ -150,7 +150,7 @@
       <div class="container">
         <div class="container section-title" data-aos="fade-up">
           <h2>Proses Klasifikasi Penyakit Jantung</h2>
-          <p>Ikuti langkah-langkah berikut untuk melakukan klasifikasi dan mengetahui hasilnya terkait dengan kondisi penyakit jantung.</p>
+          <p>Ikuti langkah-langkah berikut untuk melakukan klasifikasi dan mengetahui hasilnya terkait dengan kondisi penyakit jantung</p>
         </div>
         <div class="text-center mb-4 steps-img" data-aos="zoom-out">
           <img src="assets/assets/img/7.png" alt="">
@@ -161,7 +161,7 @@
             <div class="card-item">
               <span>01</span>
               <h4><a href="" class="stretched-link">Masuk/Daftar</a></h4>
-              <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus vero placeat</p>
+              <p>Masuk atau daftar akun untuk mengakses halaman klasifikasi.</p>
             </div>
           </div>
 
@@ -177,7 +177,7 @@
             <div class="card-item">
               <span>03</span>
               <h4><a href="" class="stretched-link">Hasil Klasifikasi</a></h4>
-              <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo vel nam quis</p>
+              <p>Mendapatkan hasil klasifikasi melalui website dan dapat digunakan untuk melakukan konsultasi ke dokter.</p>
             </div>
           </div>
 
@@ -241,7 +241,7 @@
     <section id="contact" class="contact section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Kontak</h2>
-        <p>Menjelajahi pandangan dan pemahaman mengenai Penyakit Jantung untuk menciptakan kesadaran dan memberikan dukungan bagi mereka yang terkena Penyakit Jantung.</p>
+        <p>Menjelajahi pandangan dan pemahaman mengenai Penyakit Jantung untuk menciptakan kesadaran dan memberikan dukungan bagi mereka yang terkena Penyakit Jantung</p>
       </div>
 
       <div class="container" data-aos="fade" data-aos-delay="100">
@@ -292,7 +292,7 @@
                   <div class="loading">Sedang memuat...</div>
                   <div class="error-message">Terjadi kesalahan ketika mengirim pesan.</div>
                   <div class="sent-message">Pesan telah terkirim.</div>
-                  <button type="submit" class="download-btn"><span>Kirim</span></button>
+                  <button type="submit"><span>Kirim</span></button>
                 </div>
               </div>
             </form>
