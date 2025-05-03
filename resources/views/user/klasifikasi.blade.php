@@ -1,19 +1,31 @@
 @extends('layouts.app')
 
 @section('content')
-<main class="main" style="margin-top: 100px;">
-    <section class="section">
+<main class="main">
+    <!-- Beranda -->
+    <section id="hero" class="hero section dark-background">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-8 d-flex flex-column justify-content-center align-items text-center text-md-start" data-aos="fade-up">
+            <h2>Memahami Penyakit Jantung Melalui Klasifikasi, Langkah Awal Menuju Hidup Sehat</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Klasifikasi -->
+    <section id="classification" class="classification section">
         <div class="container">
-            <div class="section-title text-center">
+            <div class="container section-title" data-aos="fade-up">
                 <h2>Klasifikasi Penyakit Jantung</h2>
                 <p>Masukkan semua inputan yang diperlukan untuk melakukan klasifikasi</p>
             </div>
 
-            <form onsubmit="return false;" class="row g-4">
+            <form onsubmit="return false;" class="row g-4" data-aos="fade-up" data-aos-delay="100">
                 @csrf
                 <div class="col-md-6">
-                    <label for="inputDate" class="form-label">Tanggal</label>
-                    <input type="date" class="form-control" id="inputDate" name="inputDate" required>
+                    <label for="name" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
                 </div>
 
                 <div class="col-md-6">
@@ -24,7 +36,7 @@
                 <div class="col-md-6">
                     <label for="sex" class="form-label">Jenis Kelamin</label>
                     <select class="form-select" id="sex" name="sex" required>
-                        <option value="">-- Pilih --</option>
+                        <option value="">Pilih</option>
                         <option value="1">Laki-laki</option>
                         <option value="0">Perempuan</option>
                     </select>
@@ -33,7 +45,7 @@
                 <div class="col-md-6">
                     <label for="cp" class="form-label">Tipe Nyeri Dada</label>
                     <select class="form-select" id="cp" name="cp" required>
-                        <option value="">-- Pilih --</option>
+                        <option value="">Pilih</option>
                         <option value="0">Typical Angina</option>
                         <option value="1">Atypical Angina</option>
                         <option value="2">Non-anginal Pain</option>
@@ -59,14 +71,14 @@
                 <div class="col-md-6">
                     <label for="exang" class="form-label">Nyeri Dada Saat Olahraga</label>
                     <select class="form-select" id="exang" name="exang" required>
-                        <option value="">-- Pilih --</option>
+                        <option value="">Pilih</option>
                         <option value="1">Ya</option>
                         <option value="0">Tidak</option>
                     </select>
                 </div>
 
                 <div class="col-12 text-center mt-4">
-                    <button type="submit" class="btn btn-primary px-5">Mulai Klasifikasi</button>
+                    <button type="submit" class="btn-custom">Mulai Klasifikasi</button>
                 </div>
             </form>
         </div>

@@ -2,21 +2,21 @@
 
 @section('content')
 <main class="main">
-    <!-- Hero Section -->
+    <!-- Beranda -->
     <section id="hero" class="hero section dark-background">
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-8 d-flex flex-column justify-content-center align-items text-center text-md-start" data-aos="fade-up">
             <h2>Memahami Penyakit Jantung Melalui Klasifikasi, Langkah Awal Menuju Hidup Sehat</h2>
             <div class="d-flex mt-4 justify-content-center justify-content-md-start">
-              <a href="{{ route('user.klasifikasi') }}" class="download-btn"><span>Jelajahi</span></a>
+              <a href="{{ route('user.klasifikasi') }}#classification" class="download-btn"><span>Jelajahi</span></a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Tentang -->
     <section id="about" class="about section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row align-items-xl-center gy-5">
@@ -66,7 +66,6 @@
       </div>
     </section>
 
-    <!-- Featured Section -->
     <section id="featured" class="featured section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Jenis - Jenis Penyakit Jantung</h2>
@@ -130,7 +129,7 @@
             </div>
           </div>
 
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="600">
             <div class="card">
               <div class="img">
                 <img src="assets/assets/img/6.png" alt="" class="img-fluid">
@@ -145,7 +144,7 @@
       </div>
     </section>
 
-    <!-- Cards Section -->
+    <!-- Layanan -->
     <section id="cards" class="cards section">
       <div class="container">
         <div class="container section-title" data-aos="fade-up">
@@ -185,7 +184,7 @@
       </div>
     </section>
 
-    <!-- Faq Section -->
+    <!-- FAQ -->
     <section id="faq" class="faq section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Frequently Asked Questions</h2>
@@ -237,7 +236,7 @@
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Kontak -->
     <section id="contact" class="contact section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Kontak</h2>
