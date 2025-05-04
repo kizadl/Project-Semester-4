@@ -38,7 +38,7 @@
                     <li><a href="{{ route('user.home') }}#cards">Layanan</a></li>
                     <li><a href="{{ route('user.klasifikasi') }}#classification" class="{{ Route::currentRouteName() == 'user.klasifikasi' ? 'active' : '' }}">Klasifikasi</a></li>
                     <li><a href="{{ route('user.home') }}#contact">Kontak</a></li>
-                    <li class="dropdown"><a href="#"><span>Akun</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <li class="dropdown"><a href=""><span>Akun</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="{{ route('login') }}">Masuk</a></li>
                             <li><a href="{{ route('register') }}">Daftar</a></li>

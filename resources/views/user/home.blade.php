@@ -25,41 +25,9 @@
             <p>Penyakit Jantung adalah kondisi ketika jantung mengalami gangguan. 
               Masalah pada jantung bisa disebabkan akibat peradangan pada pembuluh darah jantung, sumbatan, infeksi, hingga kelainan bawaan.</p>
           </div>
-
           <div class="col-xl-7">
-            <div class="row gy-4 icon-boxes">
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="icon-box">
-                  <i class="bi bi-buildings"></i>
-                  <h3>Eius provident</h3>
-                  <p>Magni repellendus vel ullam hic officia accusantium ipsa dolor omnis dolor voluptatem</p>
-                </div>
-              </div>
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon-box">
-                  <i class="bi bi-clipboard-pulse"></i>
-                  <h3>Rerum aperiam</h3>
-                  <p>Autem saepe animi et aut aspernatur culpa facere. Rerum saepe rerum voluptates quia</p>
-                </div>
-              </div>
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
-                <div class="icon-box">
-                  <i class="bi bi-command"></i>
-                  <h3>Veniam omnis</h3>
-                  <p>Omnis perferendis molestias culpa sed. Recusandae quas possimus. Quod consequatur corrupti</p>
-                </div>
-              </div>
-
-              <div class="col-md-6" data-aos="fade-up" data-aos-delay="500">
-                <div class="icon-box">
-                  <i class="bi bi-graph-up-arrow"></i>
-                  <h3>Delares sapiente</h3>
-                  <p>Sint et dolor voluptas minus possimus nostrum. Reiciendis commodi eligendi omnis quideme lorenda</p>
-                </div>
-              </div>
-
+            <div class="icon-box">
+              <img src="{{ asset('assets/assets/img/doctor.jpg') }}">
             </div>
           </div>
         </div>
@@ -139,7 +107,6 @@
               <p>Kelainan pada otot jantung yang membuatnya lebih lemah dan kurang efektif dalam memompa darah. Ini bisa disebabkan oleh genetika, infeksi, atau kondisi lain.</p>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -179,7 +146,6 @@
               <p>Mendapatkan hasil klasifikasi melalui website dan dapat digunakan untuk melakukan konsultasi ke dokter.</p>
             </div>
           </div>
-
         </div>
       </div>
     </section>
@@ -229,7 +195,6 @@
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
-
             </div>
           </div>
         </div>
@@ -269,7 +234,6 @@
                 <p>dokter@gmail.com</p>
               </div>
             </div>
-
           </div>
 
           <div class="col-lg-8">
