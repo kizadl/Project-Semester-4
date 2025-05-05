@@ -9,7 +9,7 @@
           <div class="col-lg-8 d-flex flex-column justify-content-center align-items text-center text-md-start" data-aos="fade-up">
             <h2>Memahami Penyakit Jantung Melalui Klasifikasi, Langkah Awal Menuju Hidup Sehat</h2>
             <div class="d-flex mt-4 justify-content-center justify-content-md-start">
-              <a href="{{ route('user.klasifikasi') }}#classification" class="download-btn"><span>Jelajahi</span></a>
+              <a href="{{ route('klasifikasi.create') }}#classification" class="download-btn"><span>Jelajahi</span></a>
             </div>
           </div>
         </div>

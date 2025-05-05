@@ -21,7 +21,7 @@
                 <p>Masukkan semua inputan yang diperlukan untuk melakukan klasifikasi</p>
             </div>
 
-            <form onsubmit="return false;" class="row g-4" data-aos="fade-up" data-aos-delay="100">
+            <form method="POST" action="{{ route('klasifikasi.store') }}" class="row g-4" data-aos="fade-up" data-aos-delay="100">
                 @csrf
                 <div class="col-md-6">
                     <label for="name" class="form-label">Nama</label>
@@ -84,4 +84,15 @@
         </div>
     </section>
 </main>
+
+@if(session('classification'))
+    <script>
+        Swal.fire({
+            title: 'Hasil Klasifikasi',
+            text: 'Penyakit Jantung: {{ session('classification') }}',
+            icon: 'success',
+            confirmButtonText: 'Oke'
+        });
+    </script>
+@endif
 @endsection

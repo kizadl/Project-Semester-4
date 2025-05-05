@@ -2,64 +2,93 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\cr;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Http;
 
 class KlasifikasiController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        //
+        // Tampilkan halaman daftar klasifikasi jika diperlukan.
+        return view('user.klasifikasi'); // Jika Anda memiliki index view.
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
-        //
+        // Menampilkan form untuk input klasifikasi
+        return view('user.klasifikasi'); // Menyesuaikan dengan folder user/klasifikasi.blade.php
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
-        //
+        // Validasi input
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'age' => 'required|integer',
+            'sex' => 'required|in:0,1',
+            'cp' => 'required|in:0,1,2,3',
+            'trestbps' => 'required|integer',
+            'chol' => 'required|integer',
+            'thalach' => 'nullable|integer',
+            'exang' => 'required|in:0,1',
+        ]);
+
+        // Mengirim data ke API Python untuk prediksi
+        $response = Http::post('http://127.0.0.1:5000/user/klasifikasi', $validated);
+
+        // Menangani respons dari API
+        if ($response->successful()) {
+            $result = $response->json()['prediction'];
+            
+            // Menyimpan hasil klasifikasi ke session
+            return redirect()->route('klasifikasi.create')->with('classification', $result);
+        } else {
+            $error = $response->json()['error'] ?? 'Terjadi kesalahan pada server prediksi.';
+            return back()->withErrors(['api_error' => $error]);
+        }
     }
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(cr $cr)
+    public function show($id)
     {
-        //
+        // Menampilkan data prediksi berdasarkan ID jika diperlukan
+        return view('user.klasifikasi.show', ['id' => $id]); // Menyesuaikan dengan folder user/klasifikasi.blade.php
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(cr $cr)
+    public function edit($id)
     {
-        //
+        // Formulir untuk mengedit data
+        return view('user.klasifikasi.edit', ['id' => $id]); // Menyesuaikan dengan folder user/klasifikasi.blade.php
     }
 
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, cr $cr)
+    public function update(Request $request, $id)
     {
-        //
+        // Validasi data dan mengirimkan data untuk diperbarui
+        $validated = $request->validate([
+            'usia' => 'required|numeric',
+            'jenis_kelamin' => 'required|numeric',
+            'tipe_nyeri_dada' => 'required|numeric',
+            'tekanan_darah_istirahat' => 'required|numeric',
+            'kadar_kolesterol' => 'required|numeric',
+            'detak_jantung_maksimum' => 'required|numeric',
+            'nyeri_dada_olahraga' => 'required|numeric',
+        ]);
+
+        // Mengirimkan data yang telah diperbarui ke API Python untuk prediksi ulang
+        $response = Http::post('http://127.0.0.1:5000/user/klasifikasi', $validated);
+
+        // Menangani response dari API
+        if ($response->successful()) {
+            $result = $response->json()['prediction'];
+            return view('user.klasifikasi.result', compact('result'));
+        } else {
+            $error = $response->json()['error'] ?? 'Terjadi kesalahan pada server prediksi.';
+            return back()->withErrors(['api_error' => $error]);
+        }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(cr $cr)
+    public function destroy($id)
     {
-        //
+        // Menghapus data atau reset status jika diperlukan
+        return redirect()->route('klasifikasi.index');
     }
 }
