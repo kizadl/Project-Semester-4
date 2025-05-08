@@ -10,22 +10,29 @@ class LoginController extends Controller
         return view('auth.login');
     }
 
-    public function login_proses(Request $request)
+    public function login(Request $request)
     {
-        $request->validate([
-            'email' => 'required',
-            'password' => 'required'
-        ]);
+        // Validasi input email dan password
+        $credentials = $request->only('email', 'password');
 
-        $data = [
-            'email' => $request->email,
-            'password' => $request->password,
-        ];
+        // Cek apakah email dan password cocok
+        if (Auth::attempt($credentials)) {
+            $user = Auth::user();
 
-        if (Auth::attempt($data)) {
-            return redirect()->route('dashboard');
-        } else {
-            return redirect()->route('login')->with('failed', 'Email atau Password Salah');
+            // Redirect berdasarkan role user
+            if ($user->role === 'admin') {
+                return redirect('/dashboard'); // Admin masuk ke dashboard
+            } elseif ($user->role === 'user') {
+                return redirect('/klasifikasi'); // User masuk ke halaman klasifikasi
+            } else {
+                Auth::logout();
+                return redirect('/login')->withErrors(['email' => 'Role tidak dikenali.']);
+            }
         }
+
+        // Jika login gagal, kembali ke halaman login dengan error
+        return back()->withErrors([
+            'email' => 'Email atau password salah.',
+        ])->withInput();
     }
 }
