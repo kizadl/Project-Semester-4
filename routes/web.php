@@ -8,19 +8,14 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\AdminController;
 
-Route::get('/riyawat', function () {
-    return view('administrator.riwayat');
-});
-
-Route::get('/user', function () {
-    return view('administrator.user');
-});
 
 //Authentification
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login-proses', [LoginController::class, 'login_proses'])->name('login-proses');
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+    Route::get('/riwayat', [AdminController::class, 'riwayat'])->name('riwayat');
+    Route::get('/user', [AdminController::class, 'user'])->name('user');
 });
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');

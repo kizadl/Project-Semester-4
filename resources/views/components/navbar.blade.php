@@ -22,7 +22,7 @@
         </li>
 
         <li>
-            <a href="/klasifikasi">
+            <a href="/riwayat">
                 <iconify-icon icon="solar:document-text-outline" class="menu-icon"></iconify-icon>
                 <span>Klasifikasi</span>
             </a>

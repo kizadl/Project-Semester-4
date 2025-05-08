@@ -10,4 +10,14 @@ class AdminController extends Controller
     {
         return view('administrator.dashboard'); // Ini akan menampilkan file dashboard.blade.php kamu
     }
+
+    public function riwayat()
+    {
+        return view('administrator.riwayat');
+    }
+
+    public function user()
+    {
+        return view('administrator.user');
+    }
 }
