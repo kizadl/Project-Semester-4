@@ -84,15 +84,4 @@
         </div>
     </section>
 </main>
-
-@if(session('classification'))
-    <script>
-        Swal.fire({
-            title: 'Hasil Klasifikasi',
-            text: 'Penyakit Jantung: {{ session('classification') }}',
-            icon: 'success',
-            confirmButtonText: 'Oke'
-        });
-    </script>
-@endif
 @endsection
