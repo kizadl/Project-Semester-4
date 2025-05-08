@@ -75,16 +75,20 @@
     <script src="{{ asset('assets/assets/js/main.js') }}"></script>
 
     <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var today = new Date();
-      var dd = String(today.getDate()).padStart(2, '0');
-      var mm = String(today.getMonth() + 1).padStart(2, '0');
-      var yyyy = today.getFullYear();
-      today = yyyy + '-' + mm + '-' + dd;
+    const form = document.querySelector('form');
+    const popupContainer = document.querySelector('.popup-container');
+    const closeBtn = document.querySelector('.close-btn');
 
-      document.getElementById("inputDate").value = today;
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        popupContainer.classList.add('active');
     });
-  </script>
+
+    closeBtn.addEventListener('click', function() {
+        popupContainer.classList.remove('active');
+        form.submit();
+    });
+    </script>
 </body>
 
 </html>

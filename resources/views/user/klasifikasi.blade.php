@@ -21,7 +21,7 @@
                 <p>Masukkan semua inputan yang diperlukan untuk melakukan klasifikasi</p>
             </div>
 
-            <form method="POST" action="{{ route('klasifikasi.store') }}" class="row g-4" data-aos="fade-up" data-aos-delay="100">
+            <form method="POST" action="#" class="row g-4" data-aos="fade-up" data-aos-delay="100">
                 @csrf
                 <div class="col-md-6">
                     <label for="name" class="form-label">Nama</label>
@@ -78,10 +78,18 @@
                 </div>
 
                 <div class="col-12 text-center mt-4">
-                    <button type="submit" class="btn-custom">Mulai Klasifikasi</button>
+                    <button type="submit" class="class-btn">Mulai Klasifikasi</button>
                 </div>
             </form>
         </div>
     </section>
 </main>
+
+<div class="popup-container">
+    <div class="popup-box">
+        <h1>Hasil Klasifikasi</h1>
+        <p>Ada Penyakit Jantung</p>
+        <button class="close-btn">Cek</button>
+    </div>
+</div>
 @endsection
