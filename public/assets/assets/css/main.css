@@ -1596,3 +1596,26 @@ section,
   color: var(--background-color);
   font-weight: 500;
 }
+
+.info-icon {
+  font-size: 16px;
+  color: var(--default-color);
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.info-icon:hover {
+  color: var(--accent-color);
+}
+
+.tooltip-inner {
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  background-color: var(--default-color);
+  color: var(--background-color);
+  border-radius: 5px;
+  padding: 10px;
+  text-align: justify;
+  max-width: 500px;
+  white-space: pre-line;
+}

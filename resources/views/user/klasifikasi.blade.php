@@ -43,12 +43,21 @@
                 </div>
 
                 <div class="col-md-6">
-                    <label for="cp" class="form-label">Tipe Nyeri Dada</label>
+                    <label for="cp" class="form-label">Tipe Nyeri Dada
+                        <span class="info-icon" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-html="true" title="
+                            <strong>Typical Angina:</strong> Nyeri dada yang terjadi ketika beraktivitas fisik atau stres, biasanya hilang dengan istirahat.<br>
+                            <strong>Atypical Angina:</strong> Nyeri dada yang tidak mengikuti pola umum, bisa terjadi pada saat istirahat atau beraktivitas ringan.<br>
+                            <strong>Non-anginal:</strong> Nyeri dada yang tidak disebabkan oleh masalah jantung, tetapi bisa disebabkan oleh masalah lain seperti gangguan pencernaan atau kram otot.<br>
+                            <strong>Asymptomatic:</strong> Tidak ada gejala nyeri dada, namun tes medis menunjukkan adanya masalah pada jantung.
+                        ">
+                            <i class="far fa-question-circle"></i>
+                        </span>
+                    </label>
                     <select class="form-select" id="cp" name="cp" required>
                         <option value="">Pilih</option>
                         <option value="0">Typical Angina</option>
                         <option value="1">Atypical Angina</option>
-                        <option value="2">Non-anginal Pain</option>
+                        <option value="2">Non-anginal</option>
                         <option value="3">Asymptomatic</option>
                     </select>
                 </div>
@@ -64,7 +73,7 @@
                 </div>
 
                 <div class="col-md-6">
-                    <label for="thalach" class="form-label">Detak Jantung Maksimum</label>
+                    <label for="thalach" class="form-label">Detak Jantung Maksimum (bpm)</label>
                     <input type="number" class="form-control" id="thalach" name="thalach">
                 </div>
 
