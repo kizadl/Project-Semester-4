@@ -13,13 +13,13 @@ def predict():
 
     try:
         features = [
-            data['usia'],
-            data['jenis_kelamin'],
-            data['tipe_nyeri_dada'],
-            data['tekanan_darah_istirahat'],
-            data['kadar_kolesterol'],
-            data['detak_jantung_maksimum'],
-            data['nyeri_dada_olahraga']
+            data['age'],
+            data['sex'],
+            data['cp'],
+            data['trestbps'],
+            data['chol'],
+            data.get('thalach', 0),
+            data['exang']
         ]
 
         sample = np.array([features])
