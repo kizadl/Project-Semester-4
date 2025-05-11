@@ -25,17 +25,17 @@
                 @csrf
                 <div class="col-md-6">
                     <label for="name" class="form-label">Nama</label>
-                    <input type="text" class="form-control" id="name" name="name" required>
+                    <input type="text" class="form-control class-input" id="name" name="name" required>
                 </div>
 
                 <div class="col-md-6">
                     <label for="age" class="form-label">Usia</label>
-                    <input type="number" class="form-control" id="age" name="age" required>
+                    <input type="number" class="form-control class-input" id="age" name="age" required>
                 </div>
 
                 <div class="col-md-6">
                     <label for="sex" class="form-label">Jenis Kelamin</label>
-                    <select class="form-select" id="sex" name="sex" required>
+                    <select class="form-select class-input" id="sex" name="sex" required>
                         <option value="">Pilih</option>
                         <option value="1">Laki-laki</option>
                         <option value="0">Perempuan</option>
@@ -53,7 +53,7 @@
                             <i class="far fa-question-circle"></i>
                         </span>
                     </label>
-                    <select class="form-select" id="cp" name="cp" required>
+                    <select class="form-select class-input" id="cp" name="cp" required>
                         <option value="">Pilih</option>
                         <option value="0">Typical Angina</option>
                         <option value="1">Atypical Angina</option>
@@ -64,22 +64,22 @@
 
                 <div class="col-md-6">
                     <label for="trestbps" class="form-label">Tekanan Darah Saat Istirahat (mm Hg)</label>
-                    <input type="number" class="form-control" id="trestbps" name="trestbps" required>
+                    <input type="number" class="form-control class-input" id="trestbps" name="trestbps" required>
                 </div>
 
                 <div class="col-md-6">
                     <label for="chol" class="form-label">Kadar Kolesterol (mg/dl)</label>
-                    <input type="number" class="form-control" id="chol" name="chol" required>
+                    <input type="number" class="form-control class-input" id="chol" name="chol" required>
                 </div>
 
                 <div class="col-md-6">
                     <label for="thalach" class="form-label">Detak Jantung Maksimum (bpm)</label>
-                    <input type="number" class="form-control" id="thalach" name="thalach">
+                    <input type="number" class="form-control class-input" id="thalach" name="thalach">
                 </div>
 
                 <div class="col-md-6">
                     <label for="exang" class="form-label">Nyeri Dada Saat Olahraga</label>
-                    <select class="form-select" id="exang" name="exang" required>
+                    <select class="form-select class-input" id="exang" name="exang" required>
                         <option value="">Pilih</option>
                         <option value="1">Ya</option>
                         <option value="0">Tidak</option>

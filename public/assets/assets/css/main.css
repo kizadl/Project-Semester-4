@@ -1481,13 +1481,13 @@ section,
   padding: 10px 15px;
   box-shadow: none;
   border-radius: 0;
-  color: var(--default-color);
+  color: color-mix(in srgb, var(--default-color), transparent 70%);
   background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
   transition: 0.4s;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
 }
 
 .contact .php-email-form button[type=submit]:hover {
@@ -1506,18 +1506,34 @@ section,
   margin-right: 8px;
 }
 
+/*--------------------------------------------------------------
+# Classification Section
+--------------------------------------------------------------*/
+.class-input {
+    font-size: 16px;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+    border-radius: 0px;
+    padding: 6px;
+    transition: border 0.3s ease;
+}
+
+.class-input:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: none;
+}
+
 .class-btn {
-  width: 100%;
-  height: 45px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--background-color);
   background: var(--accent-color);
-  border-radius: 6px;
+  width: 100%;
+  height: 40px;
   border: none;
   outline: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
   cursor: pointer;
-  font-size: 16px;
-  color: var(--background-color);
-  font-weight: 500;
   margin-top: 1%;
 }
 
@@ -1526,7 +1542,6 @@ section,
   background: var(--accent-color);
   border: none;
   outline: none;
-  border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   font-size: 18px;
@@ -1558,7 +1573,6 @@ section,
 .popup-container .popup-box {
   width: 500px;
   background: var(--background-color);
-  border-radius: 6px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 30px;
   transform: scale(0);
@@ -1584,17 +1598,16 @@ section,
 }
 
 .popup-box .close-btn {
-  width: 100%;
-  height: 45px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--background-color);
   background: var(--accent-color);
-  border-radius: 6px;
+  width: 100%;
+  height: 40px;
   border: none;
   outline: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
   cursor: pointer;
-  font-size: 16px;
-  color: var(--background-color);
-  font-weight: 500;
 }
 
 .info-icon {
