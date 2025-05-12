@@ -3,20 +3,20 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Jenssegers\Mongodb\Eloquent\Model;
 
 class Klasifikasi extends Model
 {
     protected $connection = 'mongodb';
     protected $fillable = [
-        'name',
-        'age',
-        'sex',
-        'cp',
-        'trestbps',
-        'chol',
-        'thalach',
-        'exang',
-        'target',
+        'nama',
+        'usia',
+        'jenis_kelamin',
+        'tipe_nyeri_dada',
+        'tekanan_darah_istirahat',
+        'kadar_kolesterol',
+        'detak_jantung_maksimum',
+        'nyeri_dada_olahraga',
+        'hasil_klasifikasi',
     ];
 }
