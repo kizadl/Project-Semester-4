@@ -59,7 +59,7 @@
           <li>
           <a href="/profile">
               <iconify-icon icon="mingcute:storage-line" class="menu-icon"></iconify-icon>
-              <span>User</span>
+              <span>Profile</span>
           </a>
           </li>
           
@@ -80,11 +80,11 @@
     <li class="fw-medium">
       <a href="index.html" class="d-flex align-items-center gap-1 hover-text-primary">
         <iconify-icon icon="solar:home-smile-angle-outline" class="icon text-lg"></iconify-icon>
-        Dashboard
+        Data Master
       </a>
     </li>
     <li>-</li>
-    <li class="fw-medium">View Profile</li>
+    <li class="fw-medium">Profile</li>
   </ul>
 </div>
 
@@ -146,11 +146,6 @@
                             <li class="nav-item" role="presentation">
                               <button class="nav-link d-flex align-items-center px-24" id="pills-change-passwork-tab" data-bs-toggle="pill" data-bs-target="#pills-change-passwork" type="button" role="tab" aria-controls="pills-change-passwork" aria-selected="false" tabindex="-1">
                                 Change Password 
-                              </button>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                              <button class="nav-link d-flex align-items-center px-24" id="pills-notification-tab" data-bs-toggle="pill" data-bs-target="#pills-notification" type="button" role="tab" aria-controls="pills-notification" aria-selected="false" tabindex="-1">
-                                Notification Settings
                               </button>
                             </li>
                         </ul>
@@ -260,44 +255,6 @@
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade" id="pills-notification" role="tabpanel" aria-labelledby="pills-notification-tab" tabindex="0">
-                                <div class="form-switch switch-primary py-12 px-16 border radius-8 position-relative mb-16">
-                                    <label for="companzNew" class="position-absolute w-100 h-100 start-0 top-0"></label>
-                                    <div class="d-flex align-items-center gap-3 justify-content-between">
-                                        <span class="form-check-label line-height-1 fw-medium text-secondary-light">Company News</span>
-                                        <input class="form-check-input" type="checkbox" role="switch" id="companzNew">
-                                    </div>
-                                </div>
-                                <div class="form-switch switch-primary py-12 px-16 border radius-8 position-relative mb-16">
-                                    <label for="pushNotifcation" class="position-absolute w-100 h-100 start-0 top-0"></label>
-                                    <div class="d-flex align-items-center gap-3 justify-content-between">
-                                        <span class="form-check-label line-height-1 fw-medium text-secondary-light">Push Notification</span>
-                                        <input class="form-check-input" type="checkbox" role="switch" id="pushNotifcation" checked>
-                                    </div>
-                                </div>
-                                <div class="form-switch switch-primary py-12 px-16 border radius-8 position-relative mb-16">
-                                    <label for="weeklyLetters" class="position-absolute w-100 h-100 start-0 top-0"></label>
-                                    <div class="d-flex align-items-center gap-3 justify-content-between">
-                                        <span class="form-check-label line-height-1 fw-medium text-secondary-light">Weekly News Letters</span>
-                                        <input class="form-check-input" type="checkbox" role="switch" id="weeklyLetters" checked>
-                                    </div>
-                                </div>
-                                <div class="form-switch switch-primary py-12 px-16 border radius-8 position-relative mb-16">
-                                    <label for="meetUp" class="position-absolute w-100 h-100 start-0 top-0"></label>
-                                    <div class="d-flex align-items-center gap-3 justify-content-between">
-                                        <span class="form-check-label line-height-1 fw-medium text-secondary-light">Meetups Near you</span>
-                                        <input class="form-check-input" type="checkbox" role="switch" id="meetUp">
-                                    </div>
-                                </div>
-                                <div class="form-switch switch-primary py-12 px-16 border radius-8 position-relative mb-16">
-                                    <label for="orderNotification" class="position-absolute w-100 h-100 start-0 top-0"></label>
-                                    <div class="d-flex align-items-center gap-3 justify-content-between">
-                                        <span class="form-check-label line-height-1 fw-medium text-secondary-light">Orders Notifications</span>
-                                        <input class="form-check-input" type="checkbox" role="switch" id="orderNotification" checked>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
@@ -305,16 +262,7 @@
         </div>
     </div>
   
-    <footer class="d-footer">
-  <div class="row align-items-center justify-content-between">
-    <div class="col-auto">
-      <p class="mb-0">© 2024 WowDash. All Rights Reserved.</p>
-    </div>
-    <div class="col-auto">
-      <p class="mb-0">Made by <span class="text-primary-600">wowtheme7</span></p>
-    </div>
-  </div>
-</footer>
+    <x-footer></x-footer>
   </main>
   
   <!-- jQuery library js -->
