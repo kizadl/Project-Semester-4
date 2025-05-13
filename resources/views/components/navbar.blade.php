@@ -24,7 +24,7 @@
         <li>
             <a href="/riwayat">
                 <iconify-icon icon="solar:document-text-outline" class="menu-icon"></iconify-icon>
-                <span>Klasifikasi</span>
+                <span>Riwayat</span>
             </a>
             </li>
 
