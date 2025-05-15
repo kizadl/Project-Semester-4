@@ -35,7 +35,7 @@
             </div>
             <ul class="to-top-list">
                 <li>
-                <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-primary d-flex align-items-center gap-3" href="company.html"> 
+                <a class="dropdown-item text-black px-0 py-8 hover-bg-transparent hover-text-primary d-flex align-items-center gap-3" href="/profile"> 
                 <iconify-icon icon="icon-park-outline:setting-two" class="icon text-xl"></iconify-icon>  Settings</a>
                 </li>
                 <li>

@@ -103,17 +103,6 @@
                         <span class="toggle-password ri-eye-line cursor-pointer position-absolute end-0 top-50 translate-middle-y me-16 text-secondary-light" data-toggle="#password-confirm"></span>
                     </div>
                 </div>
-
-                <div class="icon-field mb-16">
-                    <span class="icon top-50 translate-middle-y">
-                        <iconify-icon icon="mdi:account-key-outline"></iconify-icon>
-                    </span>
-                    <select name="role" class="form-control h-56-px bg-neutral-50 radius-12" required>
-                        <option value="user" selected>User</option>
-                        <option value="admin">Admin</option>
-                    </select>
-                </div>
-                
             
                 <button type="submit" class="btn btn-primary text-sm btn-sm px-12 py-16 w-100 radius-12 mt-32"> Sign Up</button>
             

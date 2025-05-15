@@ -12,21 +12,20 @@ use App\Http\Controllers\AdminController;
 //Authentification
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login-proses', [LoginController::class, 'login'])->name('login-proses');
-Route::middleware(['auth', 'role:admin'])->group(function () {
+
+// Protected Routes
+Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
     Route::get('/riwayat', [AdminController::class, 'riwayat'])->name('riwayat');
     Route::get('/user', [AdminController::class, 'user'])->name('user');
+    Route::get('/profile', [AdminController::class, 'profile'])->name('profile');
 });
-Route::middleware(['auth', 'role:user'])->group(function () {
-    Route::get('/klasifikasi', [UserController::class, 'index'])->name('klasifikasi');
-    Route::get('/profile', [UserController::class, 'profile'])->name('profile');
 
-});
 Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register.proses');
 
-// User
+// Landing page
 Route::get('/', [UserController::class, 'home'])->name('user.home');
 
 // Klasifikasi

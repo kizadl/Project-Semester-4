@@ -15,9 +15,4 @@ class UserController extends Controller
     {
         return view('user.klasifikasi');
     }
-
-    public function profile()
-    {
-        return view('user.profile');
-    }
 }
