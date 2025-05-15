@@ -94,7 +94,7 @@
     </section>
 </main>
 
-@if(session('classification'))
+{{-- @if(session('classification'))
 <div class="popup-container">
     <div class="popup-box">
         <h1>Hasil Klasifikasi</h1>
@@ -102,5 +102,18 @@
         <button class="close-btn">Cek</button>
     </div>
 </div>
+@endif --}}
+@if(session('classification'))
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        Swal.fire({
+            title: 'Hasil Klasifikasi',
+            text: '{{ session('classification') }}',
+            icon: 'info',
+            confirmButtonText: 'Cek'
+        });
+    });
+</script>
 @endif
+
 @endsection

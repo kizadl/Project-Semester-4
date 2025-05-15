@@ -82,7 +82,7 @@
     });
     </script>
 
-    <script>
+    {{-- <script>
     const form = document.querySelector('form');
     const popupContainer = document.querySelector('.popup-container');
     const closeBtn = document.querySelector('.close-btn');
@@ -96,7 +96,9 @@
         popupContainer.classList.remove('active');
         form.submit();
     });
-    </script>
+    </script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 
 </html>

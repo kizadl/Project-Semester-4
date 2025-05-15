@@ -46,7 +46,7 @@ class KlasifikasiController extends Controller
                 'detak_jantung_maksimum' => $validated['thalach'] ?? null,
                 'nyeri_dada_olahraga' => $validated['exang'],
                 'hasil_klasifikasi' => $result,
-]);
+            ]);
             return redirect()->route('klasifikasi.create')->with('classification', $result);
         } else {
             $error = $response->json()['error'] ?? 'Terjadi kesalahan pada server prediksi.';
