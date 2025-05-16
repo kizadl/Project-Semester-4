@@ -40,6 +40,8 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
+
     {{-- Sidebar Start --}}
     <x-navbar></x-navbar>
     {{-- Sidebar End --}}
@@ -77,12 +79,16 @@
                             <div class="d-flex flex-wrap align-items-center mt-3">
                                 <ul class="flex-shrink-0">
                                     <li class="d-flex align-items-center gap-2 mb-28">
-                                        <span class="w-12-px h-12-px rounded-circle bg-success-main"></span>
-                                        <span class="text-secondary-light text-sm fw-medium">Tidak ada penyakit: {{ $target_0 }}</span>
+                                        <span class="w-12-px h-12-px rounded-circle"
+                                            style="background-color: #3498db"></span>
+                                        <span class="text-secondary-light text-sm fw-medium">Tidak ada penyakit:
+                                            {{ $target_0 }}</span>
                                     </li>
                                     <li class="d-flex align-items-center gap-2 mb-28">
-                                        <span class="w-12-px h-12-px rounded-circle bg-warning-main"></span>
-                                        <span class="text-secondary-light text-sm fw-medium">Ada penyakit: {{ $target_1 }}</span>
+                                        <span class="w-12-px h-12-px rounded-circle"
+                                            style="background-color: #2ecc71"></span>
+                                        <span class="text-secondary-light text-sm fw-medium">Ada penyakit:
+                                            {{ $target_1 }}</span>
                                     </li>
                                 </ul>
                                 <div id="donutChart"
@@ -150,6 +156,53 @@
                             </div>
 
                             <div id="chartHasilKlasifikasi" class="barChart"></div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xxl-3">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <div class="d-flex align-items-center flex-wrap gap-2 justify-content-between">
+                                <h6 class="mb-2 fw-bold text-lg mb-0">Grafik Penyakit Berdasarkan Jenis Kelamin</h6>
+
+                            </div>
+
+                            <ul class="d-flex flex-wrap align-items-center mt-3 gap-3">
+                                <li class="d-flex align-items-center gap-2">
+                                    <span class="w-12-px h-12-px rounded-circle"
+                                        style="background-color: #3498db"></span>
+                                    <span class="text-secondary-light text-sm fw-semibold">Laki-Laki Ada:
+                                        <span class="text-primary-light fw-bold">{{ $laki_laki_ada }}</span>
+                                    </span>
+                                </li>
+                                <li class="d-flex align-items-center gap-2">
+                                    <span class="w-12-px h-12-px rounded-circle"
+                                        style="background-color: #2ecc71"></span>
+                                    <span class="text-secondary-light text-sm fw-semibold">Laki-Laki Tidak Ada:
+                                        <span class="text-primary-light fw-bold">{{ $laki_laki_tidak }}</span>
+                                    </span>
+                                </li>
+                                <li class="d-flex align-items-center gap-2">
+                                    <span class="w-12-px h-12-px rounded-circle"
+                                        style="background-color: #f1c40f"></span>
+                                    <span class="text-secondary-light text-sm fw-semibold">Perempuan Ada:
+                                        <span class="text-primary-light fw-bold">{{ $perempuan_ada }}</span>
+                                    </span>
+                                </li>
+                                <li class="d-flex align-items-center gap-2">
+                                    <span class="w-12-px h-12-px rounded-circle"
+                                        style="background-color: #e74c3c"></span>
+                                    <span class="text-secondary-light text-sm fw-semibold">Perempuan Tidak Ada:
+                                        <span class="text-primary-light fw-bold">{{ $perempuan_tidak }}</span>
+                                    </span>
+                                </li>
+                            </ul>
+
+                            <div class="mt-40">
+                                <div id="GrafikPenyakitBerdasarkanJK" class="margin-16-minus"></div>
+                            </div>
 
                         </div>
                     </div>
@@ -251,8 +304,8 @@
     <script>
         var options = {
             series: {!! json_encode([$target_0, $target_1]) !!},
-            colors: ['#45B369', '#487FFF'],
-            labels: ['Ada Penyakit', 'Tidak Ada Penyakit'],
+            colors: ['#3498db', '#2ecc71'],
+            labels: ['Tidak Ada Penyakit', 'Ada Penyakit'],
             legend: {
                 show: false
             },
@@ -325,75 +378,158 @@
 
     {{-- Grafik Hasil Klasifikasi --}}
     <script>
-      var options = {
-      series: [{
-          name: "Hasil",
-          data: [{
-              x: 'Punya Penyakit Jantung',
-              y: {{ $klasifikasi_ada }},
-          }, {
-              x: 'Tidak Punya Penyakit Jantung',
-              y: {{ $klasifikasi_tidak }},
-          }]
-      }],
-      chart: {
-          type: 'bar',
-          height: 235,
-          toolbar: {
-              show: false
-          },
-      },
-      plotOptions: {
-          bar: {
-            borderRadius: 6,
-            horizontal: false,
-            columnWidth: 24,
-            columnWidth: '52%',
-            endingShape: 'rounded',
-          }
-      },
-      dataLabels: {
-          enabled: false
-      },
-      fill: {
-          type: 'gradient',
-          colors: ['#dae5ff'], // Set the starting color (top color) here
-          gradient: {
-              shade: 'light', // Gradient shading type
-              type: 'vertical',  // Gradient direction (vertical)
-              shadeIntensity: 0.5, // Intensity of the gradient shading
-              gradientToColors: ['#dae5ff'], // Bottom gradient color (with transparency)
-              inverseColors: false, // Do not invert colors
-              opacityFrom: 1, // Starting opacity
-              opacityTo: 1,  // Ending opacity
-              stops: [0, 100],
-          },
-      },
-      grid: {
-          show: false,
-          borderColor: '#D1D5DB',
-          strokeDashArray: 4, // Use a number for dashed style
-          position: 'back',
-          padding: {
-            top: -10,
-            right: -10,
-            bottom: -10,
-            left: -10
-          }
-      },
-      xaxis: {
-          type: 'kategori',
-          categories: ['Punya Penyakit Jantung', 'Tidak Punya Penyakit Jantung']
-      },
-      yaxis: {
-        show: false,
-      },
-  };
+        var options = {
+            series: [{
+                name: "Hasil",
+                data: [{
+                    x: 'Punya Penyakit Jantung',
+                    y: {{ $klasifikasi_ada }},
+                }, {
+                    x: 'Tidak Punya Penyakit Jantung',
+                    y: {{ $klasifikasi_tidak }},
+                }]
+            }],
+            chart: {
+                type: 'bar',
+                height: 235,
+                toolbar: {
+                    show: false
+                },
+            },
+            plotOptions: {
+                bar: {
+                    borderRadius: 6,
+                    horizontal: false,
+                    columnWidth: 24,
+                    columnWidth: '52%',
+                    endingShape: 'rounded',
+                }
+            },
+            dataLabels: {
+                enabled: false
+            },
+            fill: {
+                type: 'gradient',
+                colors: ['#3498db'], // Set the starting color (top color) here
+                gradient: {
+                    shade: 'light', // Gradient shading type
+                    type: 'vertical', // Gradient direction (vertical)
+                    shadeIntensity: 0.5, // Intensity of the gradient shading
+                    gradientToColors: ['#dae5ff'], // Bottom gradient color (with transparency)
+                    inverseColors: false, // Do not invert colors
+                    opacityFrom: 1, // Starting opacity
+                    opacityTo: 1, // Ending opacity
+                    stops: [0, 100],
+                },
+            },
+            grid: {
+                show: false,
+                borderColor: '#D1D5DB',
+                strokeDashArray: 4, // Use a number for dashed style
+                position: 'back',
+                padding: {
+                    top: -10,
+                    right: -10,
+                    bottom: -10,
+                    left: -10
+                }
+            },
+            xaxis: {
+                type: 'kategori',
+                categories: ['Punya Penyakit Jantung', 'Tidak Punya Penyakit Jantung']
+            },
+            yaxis: {
+                show: false,
+            },
+        };
 
-  var chart = new ApexCharts(document.querySelector("#chartHasilKlasifikasi"), options);
-  chart.render();
+        var chart = new ApexCharts(document.querySelector("#chartHasilKlasifikasi"), options);
+        chart.render();
     </script>
     {{-- Grafik Hasil Klasifikasi --}}
+
+    {{-- Grafik Ada/Tidak Ada Penyakit berdasarkan Jenis kelamin --}}
+    <script>
+        var options = {
+            // series: [{
+            //     name: "Hasil",
+            //     data: [{
+            //         x: 'Laki-Laki Punya Penyakit Jantung',
+            //         y: {{ $laki_laki_ada }},
+            //     }, {
+            //         x: 'Laki-laki Tidak Punya Penyakit Jantung',
+            //         y: {{ $laki_laki_tidak }},
+            //     }, {
+            //         x: 'Perempuan Punya Penyakit Jantung',
+            //         y: {{ $perempuan_ada }},
+            //     }, {
+            //         x: 'Perempuan Tidak Punya Penyakit Jantung',
+            //         y: {{ $perempuan_tidak }},
+            //     }]
+            // }],
+            series: [{
+                name: 'Laki-Laki Punya Penyakit Jantung',
+                data: {!! json_encode([$laki_laki_ada]) !!}
+            }, {
+                name: 'Laki-laki Tidak Punya Penyakit Jantung',
+                data: {!! json_encode([$laki_laki_tidak]) !!}
+            }, {
+                name: 'Perempuan Punya Penyakit Jantung',
+                data: {!! json_encode([$perempuan_ada]) !!}
+            }, {
+                name: 'Perempuan Tidak Punya Penyakit Jantung',
+                data: {!! json_encode([$perempuan_tidak]) !!}
+            }],
+            colors: ['#3498db', '#2ecc71', '#f1c40f', '#e74c3c'],
+            labels: [''],
+            legend: {
+                show: false
+            },
+            chart: {
+                type: 'bar',
+                height: 250,
+                toolbar: {
+                    show: false
+                },
+            },
+            grid: {
+                show: true,
+                borderColor: '#D1D5DB',
+                strokeDashArray: 4, // Use a number for dashed style
+                position: 'back',
+            },
+            plotOptions: {
+                bar: {
+                    borderRadius: 4,
+                    columnWidth: 50,
+                },
+            },
+            dataLabels: {
+                enabled: false
+            },
+            stroke: {
+                show: true,
+                width: 2,
+                colors: ['transparent']
+            },
+            // xaxis: {
+            //     categories: ['Laki-Laki', 'Laki-laki', 'Perempuan', 'Perempuan'],
+            // },
+            yaxis: {
+                categories: ['0', '5', '10', '15', '20', '25', '30', '35', '40', '45', '50', '55', '60', '65',
+                    '70', '75', '80', '85', '90', '95', '100'
+                ],
+            },
+            fill: {
+                opacity: 1,
+                width: 18,
+            },
+        };
+
+        var chart = new ApexCharts(document.querySelector("#GrafikPenyakitBerdasarkanJK"), options);
+        chart.render();
+    </script>
+    {{-- Grafik Ada/Tidak Ada Penyakit berdasarkan Jenis kelamin --}}
 </body>
 
 </html>

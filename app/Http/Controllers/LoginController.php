@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class LoginController extends Controller
 {
@@ -19,12 +20,12 @@ class LoginController extends Controller
 
         // Cek apakah email dan password cocok
         if (Auth::attempt($credentials)) {
+            Alert::success('Halo ' . Auth::user()->name, 'Selamat Datang di HeartGuard');
             return redirect('/dashboard');
         }
 
         // Jika login gagal, kembali ke halaman login dengan error
-        return back()->withErrors([
-            'email' => 'Email atau password salah.',
-        ])->withInput();
+        Alert::error('Error', 'Email atau password salah.');
+        return back()->withInput();
     }
 }

@@ -15,13 +15,23 @@ Route::post('/login-proses', [LoginController::class, 'login'])->name('login-pro
 
 // Protected Routes
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
-    Route::get('/riwayat', [AdminController::class, 'riwayat'])->name('riwayat');
-    Route::get('/user', [AdminController::class, 'user'])->name('user');
-    Route::get('/profile', [AdminController::class, 'profile'])->name('profile');
+    Route::middleware(['verified'])->group(function () {
+        Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
+        Route::get('/riwayat', [AdminController::class, 'riwayat'])->name('riwayat');
+        Route::get('/user', [AdminController::class, 'user'])->name('user');
+        Route::get('/profile', [AdminController::class, 'profile'])->name('profile');
+        Route::post('/profile/update', [AdminController::class, 'updateProfile'])->name('profile.update');
+        Route::post('/profile/password_update', [AdminController::class, 'passwordUpdate'])->name('profile.password_update');
+    });
+    Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 });
 
-Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
+Route::get('/verify-email/{token}', [RegisterController::class, 'verifyEmail'])->name('verify-email');
+
+Route::get('/verify-email-notice', function () {
+    return view('auth.verify-notice');
+})->name('verification.notice');
+
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register.proses');
 

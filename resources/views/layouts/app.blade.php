@@ -28,6 +28,8 @@
 </head>
 
 <body class="index-page">
+    @include('sweetalert::alert')
+
     <header id="header" class="header d-flex align-items-center fixed-top">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
             <a href="{{ route('user.home') }}" class="logo d-flex align-items-center">
@@ -35,12 +37,16 @@
             </a>
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="{{ route('user.home') }}" class="{{ Route::currentRouteName() == 'user.home' ? 'active' : '' }}">Beranda</a></li>
+                    <li><a href="{{ route('user.home') }}"
+                            class="{{ Route::currentRouteName() == 'user.home' ? 'active' : '' }}">Beranda</a></li>
                     <li><a href="{{ route('user.home') }}#about">Tentang</a></li>
                     <li><a href="{{ route('user.home') }}#cards">Layanan</a></li>
-                    <li><a href="{{ route('klasifikasi.create') }}#classification" class="{{ Route::currentRouteName() == 'user.klasifikasi' ? 'active' : '' }}">Klasifikasi</a></li>
+                    <li><a href="{{ route('klasifikasi.create') }}#classification"
+                            class="{{ Route::currentRouteName() == 'user.klasifikasi' ? 'active' : '' }}">Klasifikasi</a>
+                    </li>
                     <li><a href="{{ route('user.home') }}#contact">Kontak</a></li>
-                    <li class="dropdown"><a href=""><span>Akun</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <li class="dropdown"><a href=""><span>Akun</span> <i
+                                class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="{{ route('login') }}">Masuk</a></li>
                             <li><a href="{{ route('register') }}">Daftar</a></li>
@@ -61,7 +67,8 @@
     </footer>
 
     <!-- Scroll Top -->
-    <a href="" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
     <!-- Preloader -->
     <div id="preloader"></div>
@@ -77,10 +84,10 @@
     <script src="{{ asset('assets/assets/js/main.js') }}"></script>
 
     <script>
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-        new bootstrap.Tooltip(tooltipTriggerEl);
-    });
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.forEach(function(tooltipTriggerEl) {
+            new bootstrap.Tooltip(tooltipTriggerEl);
+        });
     </script>
 
     {{-- <script>
