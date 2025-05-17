@@ -39,8 +39,7 @@
                     <li><a href="{{ route('user.home') }}" class="{{ Route::currentRouteName() == 'user.home' ? 'active' : '' }}">Beranda</a></li>
                     <li><a href="{{ route('user.home') }}#about">Tentang</a></li>
                     <li><a href="{{ route('user.home') }}#cards">Layanan</a></li>
-                    <li><a href="{{ route('klasifikasi.create') }}#classification" class="{{ Route::currentRouteName() == 'user.klasifikasi' ? 'active' : '' }}">Klasifikasi</a>
-                    </li>
+                    <li><a href="{{ route('klasifikasi.create') }}#classification" class="{{ Route::currentRouteName() == 'user.klasifikasi' ? 'active' : '' }}">Klasifikasi</a></li>
                     <li><a href="{{ route('user.home') }}#contact">Kontak</a></li>
                     <li class="dropdown"><a href=""><span>Akun</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>

@@ -176,7 +176,7 @@
               <div class="faq-item">
                 <h3>Apa saja gejala umum yang sering dialami oleh penderita penyakit jantung?</h3>
                 <div class="faq-content">
-                  <p>Beberapa gejala umum penyakit jantung meliputi nyeri dada, sesak napas, kelelahan, pusing, dan detak jantung yang tidak teratur. 
+                  <p>Beberapa gejala umum penyakit jantung yaitu nyeri dada, sesak napas, kelelahan, pusing, dan detak jantung yang tidak teratur. 
                     Namun, beberapa orang mungkin tidak menunjukkan gejala awal.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -185,7 +185,7 @@
               <div class="faq-item">
                 <h3>Bagaimana cara melakukan pengobatan pada penderita penyakit jantung?</h3>
                 <div class="faq-content">
-                  <p>Pengobatan penyakit jantung meliputi perubahan gaya hidup seperti diet sehat, berolahraga secara teratur, dan berhenti merokok.</p>
+                  <p>Pengobatan penyakit jantung antara lain perubahan gaya hidup seperti diet sehat, berolahraga secara teratur, dan berhenti merokok.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
