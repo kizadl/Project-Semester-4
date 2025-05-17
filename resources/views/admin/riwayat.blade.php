@@ -60,7 +60,7 @@
 
             <div class="card basic-data-table">
                 <div class="card-header">
-                    <h5 class="card-title mb-0">Default Datatables</h5>
+                    <h5 class="card-title mb-0">Tabel Riwayat Klasifikasi</h5>
                 </div>
                 <div class="card-body">
                     <div class="w-full overflow-x-auto">
