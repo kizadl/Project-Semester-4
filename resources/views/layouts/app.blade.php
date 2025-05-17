@@ -14,7 +14,6 @@
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- Vendor CSS Files -->
     <link href="{{ asset('assets/assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -37,16 +36,13 @@
             </a>
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="{{ route('user.home') }}"
-                            class="{{ Route::currentRouteName() == 'user.home' ? 'active' : '' }}">Beranda</a></li>
+                    <li><a href="{{ route('user.home') }}" class="{{ Route::currentRouteName() == 'user.home' ? 'active' : '' }}">Beranda</a></li>
                     <li><a href="{{ route('user.home') }}#about">Tentang</a></li>
                     <li><a href="{{ route('user.home') }}#cards">Layanan</a></li>
-                    <li><a href="{{ route('klasifikasi.create') }}#classification"
-                            class="{{ Route::currentRouteName() == 'user.klasifikasi' ? 'active' : '' }}">Klasifikasi</a>
+                    <li><a href="{{ route('klasifikasi.create') }}#classification" class="{{ Route::currentRouteName() == 'user.klasifikasi' ? 'active' : '' }}">Klasifikasi</a>
                     </li>
                     <li><a href="{{ route('user.home') }}#contact">Kontak</a></li>
-                    <li class="dropdown"><a href=""><span>Akun</span> <i
-                                class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <li class="dropdown"><a href=""><span>Akun</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="{{ route('login') }}">Masuk</a></li>
                             <li><a href="{{ route('register') }}">Daftar</a></li>
@@ -62,13 +58,12 @@
 
     <footer id="footer" class="footer dark-background">
         <div class="container">
-            <span>Copyright | All Rights Reserved</span>
+            <span>Copyright © HeartGuard 2025</span>
         </div>
     </footer>
 
     <!-- Scroll Top -->
-    <a href="" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <a href="" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Preloader -->
     <div id="preloader"></div>
@@ -82,6 +77,7 @@
 
     <!-- Main JS File -->
     <script src="{{ asset('assets/assets/js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <script>
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));

@@ -35,7 +35,7 @@ Route::get('/verify-email-notice', function () {
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register.proses');
 
-// Landing page
+// Landing Page
 Route::get('/', [UserController::class, 'home'])->name('user.home');
 
 // Klasifikasi

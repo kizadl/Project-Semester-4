@@ -23,7 +23,10 @@
           <div class="col-xl-5 content">
             <h2>Apa itu Penyakit Jantung?</h2>
             <p>Penyakit Jantung adalah kondisi ketika jantung mengalami gangguan. 
-              Masalah pada jantung bisa disebabkan akibat peradangan pada pembuluh darah jantung, sumbatan, infeksi, hingga kelainan bawaan.</p>
+              Masalah pada jantung bisa disebabkan akibat peradangan pada pembuluh darah jantung, sumbatan, infeksi, hingga kelainan bawaan. 
+              Menurut <a href="https://world-heart-federation.org/world-heart-report-2023" target="_blank" style="color: #7886C7;">World Health Federation (WHF)</a> pada tahun 2023, penyakit jantung adalah penyebab utama kematian global. 
+              Lebih dari 20,5 juta orang meninggal karena penyakit jantung dan jumlah tersebut diperkirakan akan terus meningkat setiap tahunnya.
+            </p>
           </div>
           <div class="col-xl-7">
             <div class="icon-box">
