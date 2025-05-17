@@ -63,7 +63,7 @@
         thisForm.querySelector('.sent-message').classList.add('d-block');
         thisForm.reset(); 
       } else {
-        throw new Error(data ? data : 'Form submission failed and no error message returned from: ' + action); 
+        throw new Error(data ? data : 'Pengiriman formulir gagal dan tidak ada pesan kesalahan yang diterima dari: ' + action); 
       }
     })
     .catch((error) => {

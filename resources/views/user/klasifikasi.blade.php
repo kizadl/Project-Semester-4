@@ -110,7 +110,11 @@
             title: 'Hasil Klasifikasi',
             text: '{{ session('classification') }}',
             icon: 'info',
-            confirmButtonText: 'Cek'
+            confirmButtonText: 'Konsultasi'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = '{{ route('user.home') }}#contact';
+            }
         });
     });
 </script>

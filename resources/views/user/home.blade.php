@@ -23,7 +23,10 @@
           <div class="col-xl-5 content">
             <h2>Apa itu Penyakit Jantung?</h2>
             <p>Penyakit Jantung adalah kondisi ketika jantung mengalami gangguan. 
-              Masalah pada jantung bisa disebabkan akibat peradangan pada pembuluh darah jantung, sumbatan, infeksi, hingga kelainan bawaan.</p>
+              Masalah pada jantung bisa disebabkan akibat peradangan pada pembuluh darah jantung, sumbatan, infeksi, hingga kelainan bawaan. 
+              Menurut <a href="https://world-heart-federation.org/world-heart-report-2023" target="_blank" style="color: #7886C7;">World Health Federation (WHF)</a> pada tahun 2023, penyakit jantung adalah penyebab utama kematian global. 
+              Lebih dari 20,5 juta orang meninggal karena penyakit jantung dan jumlah tersebut diperkirakan akan terus meningkat setiap tahunnya.
+            </p>
           </div>
           <div class="col-xl-7">
             <div class="icon-box">
@@ -173,7 +176,7 @@
               <div class="faq-item">
                 <h3>Apa saja gejala umum yang sering dialami oleh penderita penyakit jantung?</h3>
                 <div class="faq-content">
-                  <p>Beberapa gejala umum penyakit jantung meliputi nyeri dada, sesak napas, kelelahan, pusing, dan detak jantung yang tidak teratur. 
+                  <p>Beberapa gejala umum penyakit jantung yaitu nyeri dada, sesak napas, kelelahan, pusing, dan detak jantung yang tidak teratur. 
                     Namun, beberapa orang mungkin tidak menunjukkan gejala awal.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
@@ -182,7 +185,7 @@
               <div class="faq-item">
                 <h3>Bagaimana cara melakukan pengobatan pada penderita penyakit jantung?</h3>
                 <div class="faq-content">
-                  <p>Pengobatan penyakit jantung meliputi perubahan gaya hidup seperti diet sehat, berolahraga secara teratur, dan berhenti merokok.</p>
+                  <p>Pengobatan penyakit jantung antara lain perubahan gaya hidup seperti diet sehat, berolahraga secara teratur, dan berhenti merokok.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div>
