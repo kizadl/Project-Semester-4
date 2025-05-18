@@ -146,7 +146,7 @@
             <div class="card-item">
               <span>03</span>
               <h4><a href="" class="stretched-link">Hasil Klasifikasi</a></h4>
-              <p>Mendapatkan hasil klasifikasi melalui website dan dapat digunakan untuk melakukan konsultasi ke dokter.</p>
+              <p>Menerima hasil klasifikasi melalui website dan dapat digunakan untuk melakukan konsultasi ke dokter.</p>
             </div>
           </div>
         </div>

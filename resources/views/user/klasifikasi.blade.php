@@ -36,7 +36,7 @@
                 <div class="col-md-6">
                     <label for="sex" class="form-label">Jenis Kelamin</label>
                     <select class="form-select class-input" id="sex" name="sex" required>
-                        <option value="">Pilih</option>
+                        <option value="" disabled selected>Pilih</option>
                         <option value="1">Laki-laki</option>
                         <option value="0">Perempuan</option>
                     </select>
@@ -54,7 +54,7 @@
                         </span>
                     </label>
                     <select class="form-select class-input" id="cp" name="cp" required>
-                        <option value="">Pilih</option>
+                        <option value="" disabled selected>Pilih</option>
                         <option value="0">Typical Angina</option>
                         <option value="1">Atypical Angina</option>
                         <option value="2">Non-anginal</option>
@@ -80,7 +80,7 @@
                 <div class="col-md-6">
                     <label for="exang" class="form-label">Nyeri Dada Saat Olahraga</label>
                     <select class="form-select class-input" id="exang" name="exang" required>
-                        <option value="">Pilih</option>
+                        <option value="" disabled selected>Pilih</option>
                         <option value="1">Ya</option>
                         <option value="0">Tidak</option>
                     </select>
