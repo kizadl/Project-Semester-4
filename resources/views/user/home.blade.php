@@ -240,7 +240,8 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form method="POST" action="{{ route('contact.send') }}" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              @csrf
               <div class="row gy-4">
                 <div class="col-md-6">
                   <input type="text" name="name" class="form-control" placeholder="Nama" required="">
@@ -266,5 +267,19 @@
         </div>
       </div>
     </section>
-  </main>
+</main>
+
+@if(session('success'))
+  <div class="alert alert-success">{{ session('success') }}</div>
+@endif
+
+@if($errors->any())
+  <div class="alert alert-danger">
+    <ul class="mb-0">
+      @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+      @endforeach
+    </ul>
+  </div>
+@endif
 @endsection

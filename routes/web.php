@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\KlasifikasiController;
+use App\Http\Controllers\KontakController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\RegisterController;
@@ -41,3 +42,6 @@ Route::get('/', [UserController::class, 'home'])->name('user.home');
 // Klasifikasi
 Route::get('/klasifikasi', [KlasifikasiController::class, 'create'])->name('klasifikasi.create');
 Route::post('/klasifikasi', [KlasifikasiController::class, 'store'])->name('klasifikasi.store');
+
+// Kontak
+Route::post('/', [KontakController::class, 'send'])->name('contact.send');
