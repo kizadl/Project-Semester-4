@@ -178,17 +178,17 @@
                                     <form action="{{ route('profile.password_update') }}" method="POST">
                                         @csrf
                                         <div class="mb-20">
-                                            <label for="your-password"
+                                            <label for="old-password"
                                                 class="form-label fw-semibold text-primary-light text-sm mb-8">Old
                                                 Password
                                                 <span class="text-danger-600">*</span></label>
                                             <div class="position-relative">
                                                 <input type="password" class="form-control radius-8"
-                                                    id="your-password" placeholder="Enter Old Password*"
+                                                    id="old-password" placeholder="Enter Old Password*"
                                                     name="current_password">
                                                 <span
                                                     class="toggle-password ri-eye-line cursor-pointer position-absolute end-0 top-50 translate-middle-y me-16 text-secondary-light"
-                                                    data-toggle="#your-password"></span>
+                                                    data-toggle="#old-password"></span>
                                             </div>
                                         </div>
                                         <div class="mb-20">
