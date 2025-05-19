@@ -16,7 +16,7 @@ class MobileController extends Controller
 
         // Mengambil data yang dikirimkan (jika ada)
         $data = [
-            'name' => $data['name'] ?? '',
+            'name' => $data['name'],
             'age' => $data['age'],
             'sex' => $data['sex'],
             'cp' => $data['cp'],
@@ -31,7 +31,7 @@ class MobileController extends Controller
         if ($response->successful()) {
             $result = $response->json()['prediction'];
             Klasifikasi::create([
-                'nama' => $request['name'] ?? null,
+                'nama' => $request['name'],
                 'usia' => $request['age'],
                 'jenis_kelamin' => $request['sex'],
                 'tipe_nyeri_dada' => $request['cp'],
