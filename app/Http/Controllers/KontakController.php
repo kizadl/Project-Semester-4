@@ -16,12 +16,16 @@ class KontakController extends Controller
             'message' => 'required|string',
         ]);
 
+        try {
         Mail::send('emails.contact', ['data' => $data], function ($message) use ($data) {
             $message->to('dzakiyyanyannas@gmail.com')
                     ->subject($data['subject'])
                     ->replyTo($data['email'], $data['name']);
         });
 
-        return redirect()->route('home')->with('success', 'Pesan berhasil terkirim!');
+            return redirect()->route('user.home')->with('success', 'Pesan berhasil terkirim!');
+        } catch (\Exception $e) {
+            return back()->withErrors(['email' => 'Gagal mengirim email: ' . $e->getMessage()]);
+        }
     }
 }

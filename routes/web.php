@@ -46,4 +46,4 @@ Route::get('/klasifikasi', [KlasifikasiController::class, 'create'])->name('klas
 Route::post('/klasifikasi', [KlasifikasiController::class, 'store'])->name('klasifikasi.store');
 
 // Kontak
-Route::post('/', [KontakController::class, 'send'])->name('contact.send');
+Route::post('/contact', [KontakController::class, 'send'])->name('contact.send');
