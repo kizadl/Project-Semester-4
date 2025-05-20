@@ -104,4 +104,32 @@ class AdminController extends Controller
             return redirect()->back();
         }
     }
+
+    public function deleteUser($id)
+    {
+        try {
+            $user = User::findOrFail($id);
+            $user->delete();
+
+            Alert::success('Success', 'User berhasil dihapus');
+            return redirect()->route('user');
+        } catch (\Exception $e) {
+            Alert::error('Error', 'Gagal menghapus user');
+            return redirect()->route('user');
+        }
+    }
+
+    public function deleteRiwayat($id)
+    {
+        try {
+            $riwayat = Klasifikasi::findOrFail($id);
+            $riwayat->delete();
+
+            Alert::success('Success', 'riwayat berhasil dihapus');
+            return redirect()->route('riwayat');
+        } catch (\Exception $e) {
+            Alert::error('Error', 'Gagal menghapus riwayat');
+            return redirect()->route('riwayat');
+        }
+    }
 }

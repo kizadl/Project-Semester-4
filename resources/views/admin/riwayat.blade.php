@@ -78,6 +78,7 @@
                                     <th scope="col">Nyeri Dada Saat Olahraga</th>
                                     <th scope="col">Hasil</th>
                                     <th scope="col">Tanggal</th>
+                                    <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -95,6 +96,17 @@
                                         <td>{{ $item->nyeri_dada_olahraga == 1 ? 'Ya' : 'Tidak' }}</td>
                                         <td>{{ $item->hasil_klasifikasi }}</td>
                                         <td>{{ \Carbon\Carbon::parse($item->created_at)->locale('id')->translatedFormat('d M Y H:i') }}
+                                        </td>
+                                        <td>
+                                            <form action="{{ route('riwayat.delete', $item->id) }}" method="POST"
+                                                class="d-inline">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-danger btn-sm"
+                                                    onclick="return confirm('Apakah Anda yakin ingin menghapus riwayat ini?')">
+                                                    <i class="ri-delete-bin-line"></i> Hapus
+                                                </button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach
