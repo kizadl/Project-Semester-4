@@ -226,7 +226,7 @@
               <i class="bi bi-telephone flex-shrink-0"></i>
               <div>
                 <h3>No. Telepon</h3>
-                <p>+62 812-3456-7890</p>
+                <p>+62 896-8797-4070</p>
               </div>
             </div>
 
@@ -234,7 +234,7 @@
               <i class="bi bi-envelope flex-shrink-0"></i>
               <div>
                 <h3>Email</h3>
-                <p>dokter@gmail.com</p>
+                <p>dzakiyyanyannas@gmail.com</p>
               </div>
             </div>
           </div>
