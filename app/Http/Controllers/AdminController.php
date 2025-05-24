@@ -13,6 +13,13 @@ use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('verified');
+        $this->middleware('role:admin');
+    }
+
     public function dashboard()
     {
         $typical = Heart::where('cp', 0)->count();
@@ -105,10 +112,33 @@ class AdminController extends Controller
         }
     }
 
+    public function updateUser(Request $request, $id)
+    {
+        $user = User::findOrFail($id);
+
+        $data = [
+            'name' => $request->name,
+            'role' => $request->role,
+        ];
+
+        if ($request->filled('password')) {
+            $data['password'] = Hash::make($request->password);
+        }
+
+        $user->update($data);
+
+        Alert::success('Success', 'User berhasil diubah');
+        return redirect()->route('user');
+    }
+
     public function deleteUser($id)
     {
         try {
             $user = User::findOrFail($id);
+            if (Auth::user()->id == $user->id) {
+                Alert::error('Error', 'Anda tidak dapat menghapus diri sendiri');
+                return redirect()->route('user');
+            }
             $user->delete();
 
             Alert::success('Success', 'User berhasil dihapus');
@@ -131,5 +161,25 @@ class AdminController extends Controller
             Alert::error('Error', 'Gagal menghapus riwayat');
             return redirect()->route('riwayat');
         }
+    }
+
+    public function createUser(Request $request)
+    {
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|string|min:6',
+            'role' => 'required|in:admin,user',
+        ]);
+
+        $user = new User();
+        $user->name = $validated['name'];
+        $user->email = $validated['email'];
+        $user->password = \Hash::make($validated['password']);
+        $user->role = $validated['role'];
+        $user->save();
+
+        \RealRashid\SweetAlert\Facades\Alert::success('Success', 'User berhasil ditambahkan');
+        return redirect()->route('user');
     }
 }

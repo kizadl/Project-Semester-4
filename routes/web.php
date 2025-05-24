@@ -23,8 +23,11 @@ Route::middleware(['auth'])->group(function () {
         Route::get('/profile', [AdminController::class, 'profile'])->name('profile');
         Route::post('/profile/update', [AdminController::class, 'updateProfile'])->name('profile.update');
         Route::post('/profile/password_update', [AdminController::class, 'passwordUpdate'])->name('profile.password_update');
+        Route::get('/edit/{id}', [AdminController::class, 'editUser'])->name('user.edit');
+        Route::post('/update/{id}', [AdminController::class, 'updateUser'])->name('user.update');
         Route::delete('/user/{id}', [AdminController::class, 'deleteUser'])->name('user.delete');
         Route::delete('/riwayat/{id}', [AdminController::class, 'deleteRiwayat'])->name('riwayat.delete');
+        Route::post('/user/create', [AdminController::class, 'createUser'])->name('user.create');
     });
     Route::post('/logout', [LogoutController::class, 'logout'])->name('logout');
 });

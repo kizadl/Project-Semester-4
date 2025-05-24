@@ -5,13 +5,11 @@ namespace App\Models;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Laravel\Sanctum\HasApiTokens;
-use MongoDB\Laravel\Auth\User as Authenticatable;
-
 
 class User extends Authenticatable implements MustVerifyEmail
 {
-    protected $connection = 'mongodb';
     use HasApiTokens, HasFactory, Notifiable;
 
     protected $fillable = [
@@ -20,7 +18,8 @@ class User extends Authenticatable implements MustVerifyEmail
         'password',
         'image',
         'verification_token',
-        'email_verified',
+        'email_verified_at',
+        'role',
     ];
 
     protected $hidden = [
@@ -33,4 +32,9 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function isVerified(): bool
+    {
+        return $this->email_verified_at !== null;
+    }
 }

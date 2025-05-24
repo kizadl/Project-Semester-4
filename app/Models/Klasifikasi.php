@@ -9,6 +9,7 @@ class Klasifikasi extends Model
 {
     protected $connection = 'mongodb';
     protected $fillable = [
+        'user_id',
         'nama',
         'usia',
         'jenis_kelamin',

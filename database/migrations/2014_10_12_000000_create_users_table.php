@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('image')->nullable();
             $table->string('verification_token')->nullable();
             $table->boolean('email_verified')->default(false);
-            $table->date('email_verified_at')->nullable();
+            $table->string('role')->default('user');
             $table->rememberToken();
             $table->timestamps();
         });

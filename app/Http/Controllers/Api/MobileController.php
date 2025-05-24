@@ -31,6 +31,7 @@ class MobileController extends Controller
         if ($response->successful()) {
             $result = $response->json()['prediction'];
             Klasifikasi::create([
+                'user_id' => $request['user_id'],
                 'nama' => $request['name'],
                 'usia' => $request['age'],
                 'jenis_kelamin' => $request['sex'],
@@ -55,5 +56,28 @@ class MobileController extends Controller
                 'message' => 'Prediksi gagal dilakukan',
             ], 500);
         }
+    }
+
+    public function riwayat(Request $request)
+    {
+        $riwayat = Klasifikasi::where('user_id', $request['user_id'])->get()->map(function ($item) {
+            return [
+                'name'      => $item->nama,
+                'age'       => $item->usia,
+                'sex'       => $item->jenis_kelamin,
+                'cp'        => $item->tipe_nyeri_dada,
+                'trestbps'  => $item->tekanan_darah_istirahat,
+                'chol'      => $item->kadar_kolesterol,
+                'thalach'   => $item->detak_jantung_maksimum,
+                'exang'     => $item->nyeri_dada_olahraga,
+                'hasil'     => $item->hasil_klasifikasi,
+            ];
+        });
+
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Riwayat berhasil diambil',
+            'riwayat' => $riwayat,
+        ], 200);
     }
 }

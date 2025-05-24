@@ -58,6 +58,8 @@
                 </ul>
             </div>
 
+            <button class="btn btn-success mb-3" id="addUserBtn">Tambah User</button>
+
             <div class="card basic-data-table">
                 <div class="card-header">
                     <h5 class="card-title mb-0">Tabel User</h5>
@@ -89,6 +91,11 @@
                                                     <i class="ri-delete-bin-line"></i> Hapus
                                                 </button>
                                             </form>
+                                            <button class="btn btn-sm btn-warning editUserBtn"
+                                                data-id="{{ $item->id }}" data-name="{{ $item->name }}"
+                                                data-email="{{ $item->email }}" data-role="{{ $item->role }}">
+                                                Edit
+                                            </button>
                                         </td>
                                     </tr>
                                 @endforeach
@@ -101,6 +108,8 @@
 
         <x-footer></x-footer>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- jQuery library js -->
     <script src="assets/js/lib/jquery-3.7.1.min.js"></script>
@@ -133,6 +142,140 @@
 
     <script>
         let table = new DataTable('#dataTable');
+    </script>
+
+    <script>
+        // Tampilkan modal dan isi data user
+        $(document).on('click', '.editUserBtn', function() {
+            const userId = $(this).data('id');
+            const userName = $(this).data('name');
+            const userEmail = $(this).data('email');
+            const userRole = $(this).data('role');
+
+            $('#edit-user-id').val(userId);
+            $('#edit-user-name').val(userName);
+            $('#edit-user-email').val(userEmail);
+            $('#edit-user-role').val(userRole);
+            $('#edit-user-password').val('');
+
+            // Set action form ke /update/{id}
+            $('#editUserForm').attr('action', '{{ url('/update') }}/' + userId);
+
+            var modal = new bootstrap.Modal(document.getElementById('editUserModal'));
+            modal.show();
+        });
+    </script>
+
+    <!-- Modal Edit User -->
+    <div class="modal fade" id="editUserModal" tabindex="-1" aria-labelledby="editUserModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form id="editUserForm" method="POST" action="#">
+                @csrf
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editUserModalLabel">Edit User</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="hidden" id="edit-user-id" name="id">
+                        <div class="mb-3">
+                            <label for="edit-user-name" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="edit-user-name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-user-email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="edit-user-email" name="email" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-user-password" class="form-label">Password (opsional)</label>
+                            <input type="password" class="form-control" id="edit-user-password" name="password"
+                                placeholder="Kosongkan jika tidak ingin mengubah password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="edit-user-role" class="form-label">Role</label>
+                            <select class="form-control" id="edit-user-role" name="role" required>
+                                <option value="">Pilih Role</option>
+                                <option value="admin">Admin</option>
+                                <option value="user">User</option>
+                            </select>
+                        </div>
+                        @if ($errors->any())
+                            <div class="text-danger">
+                                {!! implode('<br>', $errors->all()) !!}
+                            </div>
+                        @endif
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Create User -->
+    <div class="modal fade" id="createUserModal" tabindex="-1" aria-labelledby="createUserModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <form id="createUserForm" method="POST" action="{{ route('user.create') }}">
+                @csrf
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="createUserModalLabel">Tambah User</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label for="create-user-name" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="create-user-name" name="name"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="create-user-email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="create-user-email" name="email"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="create-user-password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="create-user-password" name="password"
+                                required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="create-user-role" class="form-label">Role</label>
+                            <select class="form-control" id="create-user-role" name="role" required>
+                                <option value="">Pilih Role</option>
+                                <option value="admin">Admin</option>
+                                <option value="user">User</option>
+                            </select>
+                        </div>
+                        @if ($errors->any() && session('modal') == 'create')
+                            <div class="text-danger">
+                                {!! implode('<br>', $errors->all()) !!}
+                            </div>
+                        @endif
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+                        <button type="submit" class="btn btn-primary">Tambah User</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        $('#addUserBtn').on('click', function() {
+            // Bersihkan form
+            $('#create-user-name').val('');
+            $('#create-user-email').val('');
+            $('#create-user-password').val('');
+            $('#create-user-role').val('');
+            // Tampilkan modal
+            var modal = new bootstrap.Modal(document.getElementById('createUserModal'));
+            modal.show();
+        });
     </script>
 
 </body>
