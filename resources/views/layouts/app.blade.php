@@ -43,8 +43,15 @@
                     <li><a href="{{ route('user.home') }}#contact">Kontak</a></li>
                     <li class="dropdown"><a href=""><span>Akun</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
-                            <li><a href="{{ route('login') }}">Masuk</a></li>
-                            <li><a href="{{ route('register') }}">Daftar</a></li>
+                            @if(Auth::check())
+                                <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Keluar</a></li>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            @else
+                                <li><a href="{{ route('login') }}">Masuk</a></li>
+                                <li><a href="{{ route('register') }}">Daftar</a></li>
+                            @endif
                         </ul>
                     </li>
                 </ul>

@@ -15,16 +15,20 @@ class LoginController extends Controller
 
     public function login(Request $request)
     {
-        // Validasi input email dan password
         $credentials = $request->only('email', 'password');
 
-        // Cek apakah email dan password cocok
         if (Auth::attempt($credentials)) {
-            Alert::success('Halo ' . Auth::user()->name, 'Selamat Datang di HeartGuard');
-            return redirect('/dashboard');
+            $user = Auth::user();
+
+            if ($user->role === 'admin') {
+                Alert::success('Halo ' . $user->name, 'Selamat Datang di Dashboard Admin');
+                return redirect()->route('admin.dashboard');
+            } else {
+                Alert::success('Halo ' . $user->name, 'Selamat Datang di HeartGuard');
+                return redirect()->route('user.home');
+            }
         }
 
-        // Jika login gagal, kembali ke halaman login dengan error
         Alert::error('Error', 'Email atau password salah.');
         return back()->withInput();
     }
