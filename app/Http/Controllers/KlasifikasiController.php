@@ -37,6 +37,7 @@ class KlasifikasiController extends Controller
             $result = $response->json()['prediction'];
 
             Klasifikasi::create([
+                'user_id' => auth()->id(),
                 'nama' => $validated['name'],
                 'usia' => $validated['age'],
                 'jenis_kelamin' => $validated['sex'],

@@ -25,8 +25,9 @@
                 @csrf
                 <div class="col-md-6">
                     <label for="name" class="form-label">Nama</label>
-                    <input type="text" class="form-control class-input" id="name" name="name" required>
+                    <input type="text" class="form-control class-input" id="name" name="name" value="{{ Auth::user()->name }}" readonly>
                 </div>
+                <input type="hidden" name="user_id" value="{{ Auth::id() }}">
 
                 <div class="col-md-6">
                     <label for="age" class="form-label">Usia</label>
