@@ -22,7 +22,7 @@ class LoginController extends Controller
 
             if ($user->role === 'admin') {
                 Alert::success('Halo ' . $user->name, 'Selamat Datang di Dashboard Admin');
-                return redirect()->route('admin.dashboard');
+                return redirect()->route('dashboard');
             } else {
                 Alert::success('Halo ' . $user->name, 'Selamat Datang di HeartGuard');
                 return redirect()->route('user.home');

@@ -72,6 +72,7 @@
                                     <th scope="col">No</th>
                                     <th scope="col">Nama</th>
                                     <th scope="col">Email</th>
+                                    <th scope="col">Role</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
@@ -81,6 +82,7 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->name }}</td>
                                         <td>{{ $item->email }}</td>
+                                        <td>{{ $item->role }}</td>
                                         <td>
                                             <form action="{{ route('user.delete', $item->id) }}" method="POST"
                                                 class="d-inline">
