@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>HeartGuard - Profile</title>
     <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="16x16">
     <!-- remix icon font css  -->
     <link rel="stylesheet" href="assets/css/remixicon.css">
@@ -54,10 +54,7 @@
 
         <div class="dashboard-main-body">
             <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-24">
-                <h6 class="fw-semibold mb-0">View Profile</h6>
-                <ul class="d-flex align-items-center gap-2">
-                    <li class="fw-medium">Profile</li>
-                </ul>
+                <h6 class="fw-semibold mb-0">Profile</h6>
             </div>
 
             <div class="row gy-4">
@@ -161,10 +158,10 @@
                                             </div>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-center gap-3">
-                                            <button type="button"
-                                                class="border border-danger-600 bg-hover-danger-200 text-danger-600 text-md px-56 py-11 radius-8">
+                                            <a href="{{ route('dashboard') }}" 
+                                                class="border border-danger-600 bg-hover-danger-200 text-danger-600 text-md px-56 py-11 radius-8 text-decoration-none d-inline-block text-center">
                                                 Cancel
-                                            </button>
+                                            </a>
                                             <button type="submit"
                                                 class="btn btn-primary border border-primary-600 text-md px-56 py-12 radius-8">
                                                 Save

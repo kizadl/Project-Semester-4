@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HeartGuard - Riwayat</title>
+    <title>HeartGuard - Pengguna</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/assets/img/logo.png') }}">
     <!-- remix icon font css  -->
     <link rel="stylesheet" href="assets/css/remixicon.css">
@@ -52,17 +52,14 @@
 
         <div class="dashboard-main-body">
             <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-24">
-                <h6 class="fw-semibold mb-0">Riwayat</h6>
-                <ul class="d-flex align-items-center gap-2">
-                    <li class="fw-medium">Riwayat</li>
-                </ul>
+                <h6 class="fw-semibold mb-0">User</h6>
             </div>
 
-            <button class="btn btn-success mb-3" id="addUserBtn">Tambah User</button>
+            <button class="btn btn-success mb-3" id="addUserBtn">Tambah Pengguna</button>
 
             <div class="card basic-data-table">
                 <div class="card-header">
-                    <h5 class="card-title mb-0">Tabel User</h5>
+                    <h5 class="card-title mb-0">Tabel Pengguna</h5>
                 </div>
                 <div class="card-body">
                     <div class="w-full overflow-x-auto">
@@ -175,7 +172,7 @@
                 @csrf
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="editUserModalLabel">Edit User</h5>
+                        <h5 class="modal-title" id="editUserModalLabel">Edit Pengguna</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -224,7 +221,7 @@
                 @csrf
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="createUserModalLabel">Tambah User</h5>
+                        <h5 class="modal-title" id="createUserModalLabel">Tambah Pengguna</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                             aria-label="Close"></button>
                     </div>

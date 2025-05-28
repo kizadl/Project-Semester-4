@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HeartGuard - Klasifikasi</title>
+    <title>HeartGuard - Riwayat</title>
     <link rel="icon" type="image/png" href="{{ asset('assets/assets/img/logo.png') }}">
     <!-- remix icon font css  -->
     <link rel="stylesheet" href="assets/css/remixicon.css">
@@ -52,10 +52,7 @@
 
         <div class="dashboard-main-body">
             <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-24">
-                <h6 class="fw-semibold mb-0">Klasifikasi</h6>
-                <ul class="d-flex align-items-center gap-2">
-                    <li class="fw-medium">Klasifikasi</li>
-                </ul>
+                <h6 class="fw-semibold mb-0">Riwayat</h6>
             </div>
 
             <div class="card basic-data-table">
