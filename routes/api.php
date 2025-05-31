@@ -54,7 +54,7 @@ Route::post('/sanctum/token', function (Request $request) {
 
     $user = User::where('email', $email)->first();
 
-    if (! $user || ! Hash::check($password, $user->password)) {
+    if (!$user || !Hash::check($password, $user->password)) {
         throw ValidationException::withMessages([
             'email' => ['The provided credentials are incorrect.'],
         ]);
@@ -115,3 +115,4 @@ Route::middleware('auth:sanctum')->get('/user/revoke', function (Request $reques
 
 Route::post('/klasifikasi', [MobileController::class, 'klasifikasi']);
 Route::post('/riwayat', [MobileController::class, 'riwayat']);
+Route::delete('/riwayat/{id}', [MobileController::class, 'hapusRiwayat']);//pemanggilan api deleted

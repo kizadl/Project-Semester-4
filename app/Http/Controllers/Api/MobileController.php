@@ -62,15 +62,16 @@ class MobileController extends Controller
     {
         $riwayat = Klasifikasi::where('user_id', $request['user_id'])->get()->map(function ($item) {
             return [
-                'name'      => $item->nama,
-                'age'       => $item->usia,
-                'sex'       => $item->jenis_kelamin,
-                'cp'        => $item->tipe_nyeri_dada,
-                'trestbps'  => $item->tekanan_darah_istirahat,
-                'chol'      => $item->kadar_kolesterol,
-                'thalach'   => $item->detak_jantung_maksimum,
-                'exang'     => $item->nyeri_dada_olahraga,
-                'hasil'     => $item->hasil_klasifikasi,
+                'id' => $item->id,
+                'name' => $item->nama,
+                'age' => $item->usia,
+                'sex' => $item->jenis_kelamin,
+                'cp' => $item->tipe_nyeri_dada,
+                'trestbps' => $item->tekanan_darah_istirahat,
+                'chol' => $item->kadar_kolesterol,
+                'thalach' => $item->detak_jantung_maksimum,
+                'exang' => $item->nyeri_dada_olahraga,
+                'hasil' => $item->hasil_klasifikasi,
             ];
         });
 
@@ -80,4 +81,22 @@ class MobileController extends Controller
             'riwayat' => $riwayat,
         ], 200);
     }
+    //hapus riwayat
+    public function hapusRiwayat($id)
+    {
+        $deleted = Klasifikasi::find($id);
+        if (!$deleted) {
+            return response()->json([
+                'status' => 'error',
+                'message' => 'Riwayat tidak ditemukan'
+            ], 404);
+        }
+
+        $deleted->delete();
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Riwayat berhasil dihapus'
+        ], 200);
+    }
+
 }
